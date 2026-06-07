@@ -151,6 +151,7 @@ a {
 h1,
 h2,
 h3,
+h4,
 p {
   margin-top: 0;
 }
@@ -175,6 +176,12 @@ h2 {
 h3 {
   margin-bottom: 0.65rem;
   font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+h4 {
+  margin-bottom: 0.65rem;
+  font-size: 1.08rem;
   line-height: 1.2;
 }
 
@@ -242,7 +249,9 @@ h3 {
 .contact p,
 .path-card p,
 .work-list p,
-.article-grid p {
+.article-grid p,
+.study-certs p,
+.credential-grid p {
   color: var(--muted);
 }
 
@@ -252,14 +261,16 @@ h3 {
 }
 
 .path-grid,
-.article-grid {
+.article-grid,
+.credential-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
 
 .path-card,
-.article-grid article {
+.article-grid article,
+.credential-grid article {
   padding: 1.25rem;
   border: 1px solid var(--line);
   border-radius: 0.75rem;
@@ -293,6 +304,30 @@ h3 {
   font-size: 2rem;
   font-weight: 700;
   line-height: 1;
+}
+
+.study-certs {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+}
+
+.credential-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.credential-grid article {
+  display: grid;
+  align-content: start;
+  min-height: 12rem;
+}
+
+.credential-grid span {
+  margin-bottom: 1rem;
+  color: var(--accent-strong);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 .contact {
@@ -361,7 +396,8 @@ textarea {
   .intro,
   .contact,
   .path-grid,
-  .article-grid {
+  .article-grid,
+  .credential-grid {
     grid-template-columns: 1fr;
   }
 
