@@ -330,6 +330,58 @@ h4 {
   text-transform: uppercase;
 }
 
+.jesus-daily {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.daily-feature {
+  padding: clamp(1.25rem, 4vw, 2rem);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background: linear-gradient(135deg, var(--surface-strong), color-mix(in srgb, var(--accent-soft) 54%, var(--surface)));
+  box-shadow: var(--shadow);
+}
+
+.daily-feature h3 {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+}
+
+.daily-feature ol {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1.25rem 0;
+  padding-left: 1.4rem;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.daily-prayer {
+  margin-bottom: 0;
+  color: var(--accent-strong);
+  font-weight: 800;
+}
+
+.archive-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.archive-grid article {
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  background: var(--surface-strong);
+}
+
+.daily-feature p,
+.archive-grid p {
+  color: var(--muted);
+}
+
 .contact {
   display: grid;
   grid-template-columns: minmax(0, 0.85fr) minmax(18rem, 1fr);
@@ -397,6 +449,7 @@ textarea {
   .contact,
   .path-grid,
   .article-grid,
+  .archive-grid,
   .credential-grid {
     grid-template-columns: 1fr;
   }
