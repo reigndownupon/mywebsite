@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Assembly by Hand is a 30 day x86-64 assembly learning program that builds toward a working hash map capstone."
+    >
+    <title>Assembly by Hand | Reigndownupon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html#top" aria-label="Reigndownupon home">
+        <span class="brand-mark">R</span>
+        <span>Reigndownupon</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html#about">About</a>
+        <a href="index.html#paths">Explore</a>
+        <a href="index.html#work">Work</a>
+        <a href="index.html#jesus-daily">Jesus-Daily</a>
+        <a href="index.html#blog">Blog</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+
+      <button class="theme-toggle" type="button" aria-label="Switch color theme">
+        <span class="theme-label" aria-hidden="true">Theme:</span>
+        <span class="theme-text">Light</span>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="section project-hero">
+        <p class="eyebrow">Project / Learning Program</p>
+        <h1>Assembly by Hand</h1>
+        <p class="hero-copy">
+          A 30 day, hands-on x86-64 assembly path for learning computer science fundamentals from the metal up. The capstone is a working fixed-capacity hash map written in assembly and tested from C.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#day-01">Start Day 1</a>
+          <a class="button secondary" href="#all-days">Browse all 30 days</a>
+        </div>
+      </section>
+
+      <section class="section intro project-summary">
+        <div>
+          <p class="eyebrow">How it works</p>
+          <h2>Not a quiz app. A lab notebook.</h2>
+        </div>
+        <p>
+          The lessons are self-guided. You read the day, type the assembly by hand, run the commands on the VPS, inspect what happened, and keep notes. The daily Discord posts are reminders and waypoints, but you can jump to any day here whenever you want.
+        </p>
+      </section>
+
+      <section class="section" id="all-days">
+        <div class="section-heading">
+          <p class="eyebrow">30 day index</p>
+          <h2>From syscalls to a hash map.</h2>
+          <p>
+            Days 1 to 19 build the machine model: registers, memory, stack, control flow, functions, strings, structs, debugging, bits, libc, heap allocation, tiny library routines, and hashing. Days 20 to 30 build, test, explain, and extend the hash map.
+          </p>
+        </div>
+
+        <div class="lesson-grid">
+          <details class="lesson-card" id="day-01" open>
+            <summary>
+              <span>Day 01</span>
+              <strong>CPU, memory, registers, and your first syscall</strong>
+            </summary>
+            <div class="lesson-body">
+              <p><strong>Outcome:</strong> Understand what assembly is actually controlling: registers, memory, instructions, syscalls.</p>
+              <p><strong>Lab:</strong> Write a Linux x86-64 program that exits with status 42 using only <code>_start</code>, <code>mov</code>, and <code>syscall</code>.</p>
+              <p><strong>Done when:</strong> You can assemble, link, run, and inspect <code>$?</code>.</p>
+            </div>
+          </details>
+          <details class="lesson-card" id="day-02">
+            <summary>
+              <span>Day 02</span>
+              <strong>The build pipeline: source to object to executable</strong>
+            </summary>
+            <div class="lesson-body">
+              <p><strong>Outcome:</strong> Learn what assembler, linker, ELF, symbols, and sections do.</p>
+              <p><strong>Lab:</strong> Build the same program with <code>gcc -nostdlib</code>, inspect it with <code>objdump -d</code> and <code>readelf -h</code>.</p>
+              <p><strong>Done when:</strong> You can explain source, object, executable, symbol, section.</p>
+            </div>
+          </details>
+          <details class="lesson-card" id="day-03">
+            <summary>
+              <span>Day 03</span>
+              <strong>Registers and data movement</strong>
+            </summary>
+            <div class="lesson-body">
+              <p><strong>Outcome:</strong> Learn general purpose registers, register sizes, zero extension, and <code>mov</code> rules.</p>
+              <p><strong>Lab:</strong> Write arithmetic in registers and return the result as process exit code.</p>
+              <p><strong>Done when:</strong> You can predict register values before running.</p>
+            </div>
+          </details>
+          <details class="lesson-card" id="day-04">
+            <summary>
+              <span>Day 04</span>
+              <strong>Arithmetic and flags</strong>
+            </summary>
+            <div class="lesson-body">
+              <p><strong>Outcome:</strong> Use <code>add</code>, <code>sub</code>, <code>imul</code>, <code>inc</code>, <code>dec</code>, <code>cmp</code>, flags, and conditional jumps.</p>
+              <p><strong>Lab:</strong> Write a program that computes a small expression and branches on the result.</p>
+              <p><strong>Done when:</strong> You can describe how comparison is subtraction plus flags.</p>
+            </div>
+          </details>
+          <details class="lesson-card" id="day-05">
+            <summary>
+              <span>Day 05</span>
+              <strong>Memory addressing by hand</strong>
+            </summary>
+            <div class="lesson-body">
+              <p><strong>Outcome:</strong> Learn bytes, words, doublewords, quadwords, labels, RIP relative addressing, and effective addresses.</p>
+              <p><strong>Lab:</strong> Store values in <code>.data</code>, load them, modify them, and write a byte to stdout.</p>
+              <p><strong>Done when:</strong> You can read and write memory without treating it like magic.</p>
+            </div>
+          </details>
+          <details class="lesson-card" id="day-06">
+            <summary>
+              <span>Day 06</span>
+              <strong>The stack</strong>
+            </summary>
+            <div class="lesson-body">
+              <p><strong>Outcome:</strong> Learn <code>rsp</code>, <code>push</code>, <code>pop</code>, stack growth, alignment, and temporary storage.</p>
+              <p><strong>Lab:</strong> Reverse three values using only the stack.</p>
+              <p><strong>Done when:</strong> You can draw the stack before and after every instruction.</p>
+            </div>
+          </details>
+          <details class="lesson-card" id="day-07">
+            <summary>
+              <span>Day 07</span>
+              <strong>Control flow patterns</strong>
+            </summary>
+            <div class="lesson-body">
+              <p><strong>Outcome:</strong> Translate if, while, for, and do while into labels and jumps.</p>
+              <p><strong>Lab:</strong> Implement a loop that sums 1 through N.</p>
+              <p><strong>Done when:</strong> You can translate simple C control flow into assembly.</p>
+            </div>
+          </details>
+          <details class="lesson-card" id="day-08">
+            <summary>
+              <span>Day 08</span>
+              <strong>Functions and the System V ABI</strong>
+            </summary>
+            <div class="lesson-body">
+              <p><strong>Outcome:</strong> Learn calls, returns, argument registers, return values, caller saved vs callee saved.</p>
+              <p><strong>Lab:</strong> Write <code>add3(a,b,c)</code> in assembly and call it from C.</p>
+              <p><strong>Done when:</strong> You can call assembly from C using the ABI.</p>
+            </div>
+          </details>
+          <details class="lesson-card" id="day-09">
+            <summary>
+              <span>Day 09</span>
+              <strong>Stack frames and local variables</strong>
+            </summary>
+            <div class="lesson-body">
+              <p><strong>Outcome:</strong> Learn <code>rbp</code>, prologues, epilogues, local stack slots, and alignment.</p>
+              <p><strong>Lab:</strong> Write a function with two local variables and inspect stack layout.</p>
+              <p><strong>Done when:</strong> You can debug stack variables with <code>gdb</code> or <code>objdump</code>.</p>
+            </div>
+          </details>
+          <details class="lesson-card" id="day-10">
+            <summary>
+              <span>Day 10</span>
+              <strong>Strings and bytes</strong>
+            </summary>
+            <div class="lesson-body">
+              <p><strong>Outcome:</strong> Learn null termination, byte loops, <code>lea</code>, and pointer incrementing.</p>
+              <p><strong>Lab:</strong> Implement <code>strlen</code> by hand.</p>
+              <p><strong>Done when:</strong> Your assembly <code>strlen</code> passes a C test harness.</p>
+            </div>
+          </details>
+          <details class="lesson-card" id="day-11">
+            <summary>
+              <span>Day 11</span>
+              <strong>Arrays and pointer arithmetic</strong>
+            </summary>
+            <div class="lesson-body">
+              <p><strong>Outcome:</strong> Learn scaled indexing, element sizes, and base plus index addressing.</p>
+              <p><strong>Lab:</strong> Implement <code>sum_i64(int64_t *xs, size_t n)</code>.</p>
+              <p><strong>Done when:</strong> You can walk arrays safely with pointer and count.</p>
+            </div>
+          </details>
+          <details class="lesson-card" id="day-12">
+            <summary>
+              <span>Day 12</span>
+              <strong>Structs and layout</strong>
+            </summary>
+            <div class="lesson-body">
+              <p><strong>Outcome:</strong> Learn padding, alignment, field offsets, and how C structs become bytes.</p>
+              <p><strong>Lab:</strong> Create a C struct and write an assembly function that reads its fields.</p>
+              <p><strong>Done when:</strong> You can calculate offsets by hand and verify with <code>offsetof</code>.</p>
+            </div>
+          </details>
+          <details class="lesson-card" id="day-13">
+            <summary>
+              <span>Day 13</span>
+              <strong>Debugging assembly</strong>
+            </summary>
+            <div class="lesson-body">
+              <p><strong>Outcome:</strong> Use <code>gdb</code>, breakpoints, registers, memory examine, and single stepping.</p>
+              <p><strong>Lab:</strong> Debug a deliberately broken function and write notes on the root cause.</p>
+              <p><strong>Done when:</strong> You can use tools instead of guessing.</p>
+            </div>
+          </details>
+          <details class="lesson-card" id="day-14">
+            <summary>
+              <span>Day 14</span>
+              <strong>Bit operations</strong>
+            </summary>
+            <div class="lesson-body">
+              <p><strong>Outcome:</strong> Learn <code>and</code>, <code>or</code>, <code>xor</code>, <code>not</code>, shifts, rotates, masks, and alignment tricks.</p>
+              <p><strong>Lab:</strong> Implement power of two check and bit count starter.</p>
+              <p><strong>Done when:</strong> You can explain how flags and masks build low level logic.</p>
+            </div>
+          </details>
+          <details class="lesson-card" id="day-15">
+            <summary>
+              <span>Day 15</span>
+              <strong>Unsigned and signed numbers</strong>
+            </summary>
+            <div class="lesson-body">
+              <p><strong>Outcome:</strong> Learn two’s complement, sign extension, signed vs unsigned jumps, overflow.</p>
+              <p><strong>Lab:</strong> Write min/max for signed and unsigned inputs and test edge cases.</p>
+              <p><strong>Done when:</strong> You know when to use <code>jl</code> vs <code>jb</code>.</p>
+            </div>
+          </details>
+          <details class="lesson-card" id="day-16">
+            <summary>
+              <span>Day 16</span>
+              <strong>Calling libc safely</strong>
+            </summary>
+            <div class="lesson-body">
+              <p><strong>Outcome:</strong> Learn external symbols, <code>printf</code>, stack alignment before calls, and varargs basics.</p>
+              <p><strong>Lab:</strong> Call <code>printf</code> from assembly with integer output.</p>
+              <p><strong>Done when:</strong> You can use libc without corrupting the stack.</p>
+            </div>
+          </details>
+          <details class="lesson-card" id="day-17">
+            <summary>
+              <span>Day 17</span>
+              <strong>Dynamic memory from C</strong>
+            </summary>
+            <div class="lesson-body">
+              <p><strong>Outcome:</strong> Use <code>malloc</code>, <code>free</code>, and understand heap pointers from assembly.</p>
+              <p><strong>Lab:</strong> Allocate an array, fill it, print values, and free it.</p>
+              <p><strong>Done when:</strong> You can cross from assembly into runtime services.</p>
+            </div>
+          </details>
+          <details class="lesson-card" id="day-18">
+            <summary>
+              <span>Day 18</span>
+              <strong>Building a tiny standard library</strong>
+            </summary>
+            <div class="lesson-body">
+              <p><strong>Outcome:</strong> Implement reusable <code>strlen</code>, <code>strcmp</code>, <code>memcpy</code>, and <code>memset</code> subsets.</p>
+              <p><strong>Lab:</strong> Create <code>libtinyasm.a</code> and link tests against it.</p>
+              <p><strong>Done when:</strong> You start thinking in reusable primitives.</p>
+            </div>
+          </details>
+          <details class="lesson-card" id="day-19">
+            <summary>
+              <span>Day 19</span>
+              <strong>Hashing fundamentals</strong>
+            </summary>
+            <div class="lesson-body">
+              <p><strong>Outcome:</strong> Understand deterministic hashing, byte mixing, modulo/capacity, and collisions.</p>
+              <p><strong>Lab:</strong> Implement FNV-1a hash for null terminated strings.</p>
+              <p><strong>Done when:</strong> Your hash output matches known test vectors.</p>
+            </div>
+          </details>
+          <details class="lesson-card" id="day-20">
+            <summary>
+              <span>Day 20</span>
+              <strong>Hash table design</strong>
+            </summary>
+            <div class="lesson-body">
+              <p><strong>Outcome:</strong> Learn buckets, entries, keys, values, capacity, load factor, and separate chaining.</p>
+              <p><strong>Lab:</strong> Design the structs and constants for a string to int hash map.</p>
+              <p><strong>Done when:</strong> You can draw memory layout for the table.</p>
+            </div>
+          </details>
+          <details class="lesson-card" id="day-21">
+            <summary>
+              <span>Day 21</span>
+              <strong>Hash map initialization</strong>
+            </summary>
+            <div class="lesson-body">
+              <p><strong>Outcome:</strong> Write <code>hm_init</code> to allocate buckets and initialize fields.</p>
+              <p><strong>Lab:</strong> Implement init/free skeleton with C harness.</p>
+              <p><strong>Done when:</strong> A new map has valid capacity, size 0, and null buckets.</p>
+            </div>
+          </details>
+          <details class="lesson-card" id="day-22">
+            <summary>
+              <span>Day 22</span>
+              <strong>Entry allocation and ownership</strong>
+            </summary>
+            <div class="lesson-body">
+              <p><strong>Outcome:</strong> Handle key copying, value storage, next pointers, and failure paths.</p>
+              <p><strong>Lab:</strong> Implement entry creation with <code>malloc</code> and <code>strdup</code> or manual copy.</p>
+              <p><strong>Done when:</strong> No leaks on allocation failure.</p>
+            </div>
+          </details>
+          <details class="lesson-card" id="day-23">
+            <summary>
+              <span>Day 23</span>
+              <strong>Hash map insert</strong>
+            </summary>
+            <div class="lesson-body">
+              <p><strong>Outcome:</strong> Implement bucket index, collision chain traversal, update existing key, insert new key.</p>
+              <p><strong>Lab:</strong> Write <code>hm_put(map,key,value)</code>.</p>
+              <p><strong>Done when:</strong> Inserts and updates pass tests.</p>
+            </div>
+          </details>
+          <details class="lesson-card" id="day-24">
+            <summary>
+              <span>Day 24</span>
+              <strong>Hash map lookup</strong>
+            </summary>
+            <div class="lesson-body">
+              <p><strong>Outcome:</strong> Implement search through a bucket chain and return found status/value.</p>
+              <p><strong>Lab:</strong> Write <code>hm_get(map,key,out_value)</code>.</p>
+              <p><strong>Done when:</strong> Lookups pass hit, miss, and collision tests.</p>
+            </div>
+          </details>
+          <details class="lesson-card" id="day-25">
+            <summary>
+              <span>Day 25</span>
+              <strong>Hash map delete</strong>
+            </summary>
+            <div class="lesson-body">
+              <p><strong>Outcome:</strong> Unlink nodes in singly linked chains, free key and entry, update size.</p>
+              <p><strong>Lab:</strong> Write <code>hm_delete(map,key)</code>.</p>
+              <p><strong>Done when:</strong> Delete head, middle, tail, and missing keys correctly.</p>
+            </div>
+          </details>
+          <details class="lesson-card" id="day-26">
+            <summary>
+              <span>Day 26</span>
+              <strong>Resizing and rehashing</strong>
+            </summary>
+            <div class="lesson-body">
+              <p><strong>Outcome:</strong> Grow capacity when load factor is high; move nodes without reallocating keys.</p>
+              <p><strong>Lab:</strong> Implement <code>hm_resize</code> and integrate into put.</p>
+              <p><strong>Done when:</strong> Map remains correct after many inserts.</p>
+            </div>
+          </details>
+          <details class="lesson-card" id="day-27">
+            <summary>
+              <span>Day 27</span>
+              <strong>Testing assembly like production code</strong>
+            </summary>
+            <div class="lesson-body">
+              <p><strong>Outcome:</strong> Use C test harnesses, sanitizers where possible, randomized tests, and invariants.</p>
+              <p><strong>Lab:</strong> Create a test suite for all hash map operations.</p>
+              <p><strong>Done when:</strong> Failures identify exact operation and case.</p>
+            </div>
+          </details>
+          <details class="lesson-card" id="day-28">
+            <summary>
+              <span>Day 28</span>
+              <strong>Performance and cache intuition</strong>
+            </summary>
+            <div class="lesson-body">
+              <p><strong>Outcome:</strong> Learn pointer chasing, branch prediction, locality, capacity choice, and profiling basics.</p>
+              <p><strong>Lab:</strong> Benchmark hash map operations and compare chain lengths.</p>
+              <p><strong>Done when:</strong> You can explain why data layout matters.</p>
+            </div>
+          </details>
+          <details class="lesson-card" id="day-29">
+            <summary>
+              <span>Day 29</span>
+              <strong>Capstone integration</strong>
+            </summary>
+            <div class="lesson-body">
+              <p><strong>Outcome:</strong> Clean API, docs, Makefile, tests, examples, and error handling.</p>
+              <p><strong>Lab:</strong> Finish <code>hashmap.s</code>, <code>hashmap.h</code>, <code>test_hashmap.c</code>, and <code>README</code>.</p>
+              <p><strong>Done when:</strong> A fresh clone can run <code>make test</code>.</p>
+            </div>
+          </details>
+          <details class="lesson-card" id="day-30">
+            <summary>
+              <span>Day 30</span>
+              <strong>Teach it back and extend it</strong>
+            </summary>
+            <div class="lesson-body">
+              <p><strong>Outcome:</strong> Solidify mastery by explaining and extending your map.</p>
+              <p><strong>Lab:</strong> Write a guided explanation of your hash map and add one feature: iteration, string values, or custom allocator.</p>
+              <p><strong>Done when:</strong> You can explain every instruction and every byte of layout.</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="section project-summary">
+        <div class="section-heading">
+          <p class="eyebrow">Local source</p>
+          <h2>Full working repo on the VPS.</h2>
+          <p>
+            The full course files, Makefile, assembly labs, C test harnesses, and hash map implementation live at:
+          </p>
+          <pre><code>/home/reign/assembly-by-hand-30-days</code></pre>
+          <p>
+            Run <code>make test</code> or <code>make test-hashmap-asan</code> from that directory to verify the labs.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> Reigndownupon. All are welcome.</p>
+      <a href="#top">Back to top</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
