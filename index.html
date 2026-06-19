@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap"
       rel="stylesheet"
     >
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
     <header class="site-header">
@@ -24,11 +24,11 @@
       </a>
 
       <nav class="nav-links" aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#projects-preview">Projects</a>
-        <a href="#daily-jesus-preview">Daily Jesus</a>
-        <a href="#blog-preview">Blog</a>
-        <a href="#contact">Contact</a>
+        <a href="/about/">About</a>
+        <a href="/projects/">Projects</a>
+        <a href="/dailyjesus/">Daily Jesus</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact/">Contact</a>
       </nav>
 
       <button class="theme-toggle" type="button" aria-label="Switch color theme">
@@ -47,27 +47,29 @@
             what I am learning, and the hope that shapes the work. You are welcome to join me.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#paths">Come and See</a>
-            <a class="button secondary" href="#contact">Get in Touch</a>
+            <a class="button primary" href="/about/">Come and See</a>
+            <a class="button secondary" href="/contact/">Get in Touch</a>
           </div>
         </div>
 
         <div class="hero-scene">
           <img
-            src="assets/hero-table-skyline.png"
+            src="/assets/hero-table-skyline.png"
             alt="A long woodland table with people gathered together and room for more"
           >
         </div>
       </section>
-      <section class="section intro" id="about">
+      <section class="section intro" id="about-preview">
         <div>
-          <p class="eyebrow">About the heart of it</p>
+          <p class="eyebrow">About</p>
           <h2>A welcoming basecamp for the things you are building.</h2>
         </div>
-        <p>
-          This first version is intentionally simple: a clean shell that gives your site a professional shape while leaving
-          room for the full story, project writeups, faith reflections, and cybersecurity notes you will add next.
-        </p>
+        <div>
+          <p>
+            Reigndownupon is a home for faith, AI, cybersecurity, learning, and purpose. The full About page now has its own space.
+          </p>
+          <a class="button secondary" href="/about/">Read about Reigndownupon</a>
+        </div>
       </section>
       <section class="section paths" id="paths">
         <div class="section-heading">
@@ -80,21 +82,21 @@
             <span class="card-kicker">Faith</span>
             <h3>Jesus-Daily</h3>
             <p>Daily Scripture reflections meant to keep the day centered on Jesus, mercy, truth, and humble obedience.</p>
-            <a href="daily-jesus.html">Read today's reflection</a>
+            <a href="/dailyjesus/">Read today's reflection</a>
           </article>
 
           <article class="path-card">
             <span class="card-kicker">AI</span>
             <h3>Experiments and builds</h3>
             <p>Projects, prototypes, workflows, and notes from learning how AI can help people create and solve problems.</p>
-            <a href="projects.html">View AI work</a>
+            <a href="/projects/">View AI work</a>
           </article>
 
           <article class="path-card">
             <span class="card-kicker">Cyber</span>
             <h3>Security with humility</h3>
             <p>Cybersecurity learning, practical projects, defensive thinking, and a steady respect for the people behind systems.</p>
-            <a href="projects.html">View cyber projects</a>
+            <a href="/projects/">View cyber projects</a>
           </article>
         </div>
       </section>
@@ -107,7 +109,7 @@
             <h2>Recent project space.</h2>
             <p>Two highlighted items live here so the homepage stays focused. The full project and credential list has its own page.</p>
           </div>
-          <a class="button secondary" href="projects.html">View all projects</a>
+          <a class="button secondary" href="/projects/">View all projects</a>
         </div>
 
         <div class="work-list">
@@ -116,7 +118,7 @@
             <div>
               <h3>Assembly by Hand</h3>
               <p>A 30 day x86-64 assembly learning program that starts with raw syscalls and builds toward a tested hash map capstone.</p>
-              <a href="assembly-by-hand.html">Start the first lesson</a>
+              <a href="/assembly-by-hand.html">Start the first lesson</a>
             </div>
           </article>
           <article>
@@ -136,7 +138,7 @@
             <h2>Scripture snippets for today.</h2>
             <p>The homepage shows the latest two reflections. The full Daily Jesus archive now has its own page.</p>
           </div>
-          <a class="button secondary" href="daily-jesus.html">View all Daily Jesus</a>
+          <a class="button secondary" href="/dailyjesus/">View all Daily Jesus</a>
         </div>
 
         <article class="daily-feature">
@@ -172,7 +174,7 @@
             <h2>Faith and cybersecurity.</h2>
             <p>The homepage shows the latest two articles. The full article archive now has its own page.</p>
           </div>
-          <a class="button secondary" href="blog.html">View all articles</a>
+          <a class="button secondary" href="/blog/">View all articles</a>
         </div>
 
         <div class="article-list">
@@ -207,40 +209,19 @@
         </div>
       </section>
 
-      <section class="section contact" id="contact">
+      <section class="section contact" id="contact-preview">
         <div>
           <p class="eyebrow">Contact</p>
           <h2>Want to connect?</h2>
           <p>
-            This form is ready visually. Before launch, it can be connected to a service like Formspree, Basin, or another
-            static-site form provider so visitors can reach you without your email being displayed publicly.
+            Reach out about faith, encouragement, AI projects, cybersecurity, or something else. The contact form now has its own page.
           </p>
         </div>
-
-        <form class="contact-form" action="#" method="post">
-          <label>
-            Name
-            <input type="text" name="name" placeholder="Your name">
-          </label>
-          <label>
-            Email
-            <input type="email" name="email" placeholder="you@example.com">
-          </label>
-          <label>
-            What would you like to talk about?
-            <select name="topic">
-              <option>Faith / encouragement</option>
-              <option>AI project</option>
-              <option>Cybersecurity</option>
-              <option>Something else</option>
-            </select>
-          </label>
-          <label>
-            Message
-            <textarea name="message" rows="5" placeholder="Write your message here"></textarea>
-          </label>
-          <button class="button primary" type="submit">Send Message</button>
-        </form>
+        <div class="contact-card">
+          <h3>Start a conversation</h3>
+          <p>Choose the Contact page when you are ready to send a note.</p>
+          <a class="button primary" href="/contact/">Go to contact</a>
+        </div>
       </section>
     </main>
     <footer class="site-footer">
@@ -248,6 +229,6 @@
       <a href="#top">Back to top</a>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
   </body>
 </html>
