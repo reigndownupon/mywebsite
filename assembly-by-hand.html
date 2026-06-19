@@ -43,7 +43,7 @@
         <p class="eyebrow">Project / Learning Program</p>
         <h1>Assembly by Hand</h1>
         <p class="hero-copy">
-          A 30 day, hands-on x86-64 assembly path for learning computer science fundamentals from the metal up. The capstone is a working fixed-capacity hash map written in assembly and tested from C.
+          A 30 day, hands-on x86-64 assembly path for learning computer science fundamentals from the metal up. Each day now includes the practical reason for the lesson and what to notice as each command runs.
         </p>
         <div class="hero-actions">
           <a class="button primary" href="#day-01">Start Day 1</a>
@@ -57,7 +57,7 @@
           <h2>Not a quiz app. A lab notebook.</h2>
         </div>
         <p>
-          The lessons are self-guided. You read the day, type the assembly by hand, run the commands on the VPS, inspect what happened, and keep notes. The daily Discord posts are reminders and waypoints, but you can jump to any day here whenever you want.
+          The lessons are self-guided. You read the day, type the assembly by hand, run the commands on the VPS, inspect what changed, and keep notes. The goal is to connect every command to a concrete thing: an object file, an executable, a register, a memory address, output, or a test result.
         </p>
       </section>
 
@@ -66,7 +66,7 @@
           <p class="eyebrow">30 day index</p>
           <h2>From syscalls to a hash map.</h2>
           <p>
-            Days 1 to 19 build the machine model: registers, memory, stack, control flow, functions, strings, structs, debugging, bits, libc, heap allocation, tiny library routines, and hashing. Days 20 to 30 build, test, explain, and extend the hash map.
+            Days 1 to 19 build the machine model. Days 20 to 30 build, test, explain, and extend the hash map. Open any day to see the outcome, practical application, command lessons, lab, and completion target.
           </p>
         </div>
 
@@ -78,6 +78,10 @@
             </summary>
             <div class="lesson-body">
               <p><strong>Outcome:</strong> Understand what assembly is actually controlling: registers, memory, instructions, syscalls.</p>
+              <p><strong>Practical application:</strong> You learn that programs are not magic. They become instructions that place values in registers and ask the operating system to do work.</p>
+              <p><strong>What to learn from the commands:</strong> <code>make clean</code> removes old build artifacts so you know the result came from today’s source. <code>make day-01</code> assembles, links, runs the program, and checks that the OS received exit code 42.
+
+As you run each command, pause and name what changed: source file, object file, executable, register value, memory value, exit code, printed output, or test result.</p>
               <p><strong>Lab:</strong> Write a Linux x86-64 program that exits with status 42 using only <code>_start</code>, <code>mov</code>, and <code>syscall</code>.</p>
               <p><strong>Done when:</strong> You can assemble, link, run, and inspect <code>$?</code>.</p>
             </div>
@@ -89,6 +93,10 @@
             </summary>
             <div class="lesson-body">
               <p><strong>Outcome:</strong> Learn what assembler, linker, ELF, symbols, and sections do.</p>
+              <p><strong>Practical application:</strong> You learn how source code becomes an executable file, which is the foundation for debugging compilers, linkers, malware, packed binaries, and broken builds.</p>
+              <p><strong>What to learn from the commands:</strong> <code>gcc -nostdlib</code> teaches what happens when you remove the normal C runtime. <code>objdump -d</code> shows the actual machine instructions. <code>readelf -h</code> shows the executable format the OS loader reads.
+
+As you run each command, pause and name what changed: source file, object file, executable, register value, memory value, exit code, printed output, or test result.</p>
               <p><strong>Lab:</strong> Build the same program with <code>gcc -nostdlib</code>, inspect it with <code>objdump -d</code> and <code>readelf -h</code>.</p>
               <p><strong>Done when:</strong> You can explain source, object, executable, symbol, section.</p>
             </div>
@@ -100,6 +108,10 @@
             </summary>
             <div class="lesson-body">
               <p><strong>Outcome:</strong> Learn general purpose registers, register sizes, zero extension, and <code>mov</code> rules.</p>
+              <p><strong>Practical application:</strong> You learn to treat registers like the CPU’s working desk. Most high-level variables become register moves and arithmetic at some point.</p>
+              <p><strong>What to learn from the commands:</strong> The build command proves your register arithmetic survives assembly and linking. The exit status check teaches that <code>rax</code> and <code>rdi</code> values eventually become observable program behavior.
+
+As you run each command, pause and name what changed: source file, object file, executable, register value, memory value, exit code, printed output, or test result.</p>
               <p><strong>Lab:</strong> Write arithmetic in registers and return the result as process exit code.</p>
               <p><strong>Done when:</strong> You can predict register values before running.</p>
             </div>
@@ -111,6 +123,10 @@
             </summary>
             <div class="lesson-body">
               <p><strong>Outcome:</strong> Use <code>add</code>, <code>sub</code>, <code>imul</code>, <code>inc</code>, <code>dec</code>, <code>cmp</code>, flags, and conditional jumps.</p>
+              <p><strong>Practical application:</strong> You learn how decisions really happen. Every <code>if</code> statement eventually becomes comparison, flags, and jumps.</p>
+              <p><strong>What to learn from the commands:</strong> The run command teaches whether your branch went where you expected. Disassembly teaches how labels and conditional jumps replace high-level control flow.
+
+As you run each command, pause and name what changed: source file, object file, executable, register value, memory value, exit code, printed output, or test result.</p>
               <p><strong>Lab:</strong> Write a program that computes a small expression and branches on the result.</p>
               <p><strong>Done when:</strong> You can describe how comparison is subtraction plus flags.</p>
             </div>
@@ -122,6 +138,10 @@
             </summary>
             <div class="lesson-body">
               <p><strong>Outcome:</strong> Learn bytes, words, doublewords, quadwords, labels, RIP relative addressing, and effective addresses.</p>
+              <p><strong>Practical application:</strong> You learn that memory is addressed byte by byte. Strings, arrays, structs, files, packets, and heap objects all depend on this model.</p>
+              <p><strong>What to learn from the commands:</strong> <code>make day-05</code> builds and runs a raw <code>write</code> syscall. Seeing <code>A</code> printed teaches that <code>rsi</code> held an address and <code>rdx</code> held a byte count.
+
+As you run each command, pause and name what changed: source file, object file, executable, register value, memory value, exit code, printed output, or test result.</p>
               <p><strong>Lab:</strong> Store values in <code>.data</code>, load them, modify them, and write a byte to stdout.</p>
               <p><strong>Done when:</strong> You can read and write memory without treating it like magic.</p>
             </div>
@@ -133,6 +153,10 @@
             </summary>
             <div class="lesson-body">
               <p><strong>Outcome:</strong> Learn <code>rsp</code>, <code>push</code>, <code>pop</code>, stack growth, alignment, and temporary storage.</p>
+              <p><strong>Practical application:</strong> You learn the stack as temporary storage and call history. This is essential for debugging crashes, understanding exploits, and reading function calls.</p>
+              <p><strong>What to learn from the commands:</strong> The day target should prove your pushes and pops restore values in the right order. Single-stepping teaches that the stack grows downward as <code>rsp</code> changes.
+
+As you run each command, pause and name what changed: source file, object file, executable, register value, memory value, exit code, printed output, or test result.</p>
               <p><strong>Lab:</strong> Reverse three values using only the stack.</p>
               <p><strong>Done when:</strong> You can draw the stack before and after every instruction.</p>
             </div>
@@ -144,6 +168,10 @@
             </summary>
             <div class="lesson-body">
               <p><strong>Outcome:</strong> Translate if, while, for, and do while into labels and jumps.</p>
+              <p><strong>Practical application:</strong> You learn how loops are built from labels, counters, comparisons, and jumps. This is the skeleton beneath <code>for</code>, <code>while</code>, retries, parsers, and scanners.</p>
+              <p><strong>What to learn from the commands:</strong> Running the target checks the loop result. Disassembly teaches that there is no special loop object, only state plus a jump back.
+
+As you run each command, pause and name what changed: source file, object file, executable, register value, memory value, exit code, printed output, or test result.</p>
               <p><strong>Lab:</strong> Implement a loop that sums 1 through N.</p>
               <p><strong>Done when:</strong> You can translate simple C control flow into assembly.</p>
             </div>
@@ -155,6 +183,10 @@
             </summary>
             <div class="lesson-body">
               <p><strong>Outcome:</strong> Learn calls, returns, argument registers, return values, caller saved vs callee saved.</p>
+              <p><strong>Practical application:</strong> You learn how assembly cooperates with C. This is the bridge to real programs, libraries, operating system APIs, and mixed-language debugging.</p>
+              <p><strong>What to learn from the commands:</strong> Compiling the C harness teaches where arguments are placed before the call. The test proves your assembly returned the correct value in <code>rax</code>.
+
+As you run each command, pause and name what changed: source file, object file, executable, register value, memory value, exit code, printed output, or test result.</p>
               <p><strong>Lab:</strong> Write <code>add3(a,b,c)</code> in assembly and call it from C.</p>
               <p><strong>Done when:</strong> You can call assembly from C using the ABI.</p>
             </div>
@@ -166,6 +198,10 @@
             </summary>
             <div class="lesson-body">
               <p><strong>Outcome:</strong> Learn <code>rbp</code>, prologues, epilogues, local stack slots, and alignment.</p>
+              <p><strong>Practical application:</strong> You learn how local variables and call frames are organized. This makes stack traces, crash dumps, and debugger views understandable.</p>
+              <p><strong>What to learn from the commands:</strong> The build and debugger commands teach how <code>rbp</code> can anchor a stable view of locals even while <code>rsp</code> moves.
+
+As you run each command, pause and name what changed: source file, object file, executable, register value, memory value, exit code, printed output, or test result.</p>
               <p><strong>Lab:</strong> Write a function with two local variables and inspect stack layout.</p>
               <p><strong>Done when:</strong> You can debug stack variables with <code>gdb</code> or <code>objdump</code>.</p>
             </div>
@@ -177,6 +213,10 @@
             </summary>
             <div class="lesson-body">
               <p><strong>Outcome:</strong> Learn null termination, byte loops, <code>lea</code>, and pointer incrementing.</p>
+              <p><strong>Practical application:</strong> You learn pointer walking with a real primitive. Many parsers, protocols, and C library routines are just careful byte loops.</p>
+              <p><strong>What to learn from the commands:</strong> <code>make day-10</code> compiles assembly plus a C test harness. The tests teach that an empty string, one-character string, and normal string all end at the null byte.
+
+As you run each command, pause and name what changed: source file, object file, executable, register value, memory value, exit code, printed output, or test result.</p>
               <p><strong>Lab:</strong> Implement <code>strlen</code> by hand.</p>
               <p><strong>Done when:</strong> Your assembly <code>strlen</code> passes a C test harness.</p>
             </div>
@@ -188,6 +228,10 @@
             </summary>
             <div class="lesson-body">
               <p><strong>Outcome:</strong> Learn scaled indexing, element sizes, and base plus index addressing.</p>
+              <p><strong>Practical application:</strong> You learn that arrays are base address plus element size times index. This is the heart of buffers, tables, packet fields, and memory safety.</p>
+              <p><strong>What to learn from the commands:</strong> The target should prove your scaled addressing matches the C array layout. Each test teaches that count bounds matter as much as the pointer.
+
+As you run each command, pause and name what changed: source file, object file, executable, register value, memory value, exit code, printed output, or test result.</p>
               <p><strong>Lab:</strong> Implement <code>sum_i64(int64_t *xs, size_t n)</code>.</p>
               <p><strong>Done when:</strong> You can walk arrays safely with pointer and count.</p>
             </div>
@@ -199,6 +243,10 @@
             </summary>
             <div class="lesson-body">
               <p><strong>Outcome:</strong> Learn padding, alignment, field offsets, and how C structs become bytes.</p>
+              <p><strong>Practical application:</strong> You learn that structs are agreed-upon byte offsets. This is crucial for ABIs, file formats, network structures, and reverse engineering.</p>
+              <p><strong>What to learn from the commands:</strong> The C harness teaches the real offsets. Your assembly load instructions teach how field names become numbers like 0, 8, and 16.
+
+As you run each command, pause and name what changed: source file, object file, executable, register value, memory value, exit code, printed output, or test result.</p>
               <p><strong>Lab:</strong> Create a C struct and write an assembly function that reads its fields.</p>
               <p><strong>Done when:</strong> You can calculate offsets by hand and verify with <code>offsetof</code>.</p>
             </div>
@@ -210,6 +258,10 @@
             </summary>
             <div class="lesson-body">
               <p><strong>Outcome:</strong> Use <code>gdb</code>, breakpoints, registers, memory examine, and single stepping.</p>
+              <p><strong>Practical application:</strong> You learn to debug instead of guess. Assembly rewards patient observation of registers, memory, and flags.</p>
+              <p><strong>What to learn from the commands:</strong> <code>gdb</code> commands teach one instruction at a time. Register and memory inspection teaches cause and effect directly.
+
+As you run each command, pause and name what changed: source file, object file, executable, register value, memory value, exit code, printed output, or test result.</p>
               <p><strong>Lab:</strong> Debug a deliberately broken function and write notes on the root cause.</p>
               <p><strong>Done when:</strong> You can use tools instead of guessing.</p>
             </div>
@@ -221,6 +273,10 @@
             </summary>
             <div class="lesson-body">
               <p><strong>Outcome:</strong> Learn <code>and</code>, <code>or</code>, <code>xor</code>, <code>not</code>, shifts, rotates, masks, and alignment tricks.</p>
+              <p><strong>Practical application:</strong> You learn bit-level control. Masks and shifts drive permissions, flags, alignment, compression, crypto plumbing, and protocol parsing.</p>
+              <p><strong>What to learn from the commands:</strong> The tests teach whether your mask keeps or removes the intended bits. Edge cases teach why zero and powers of two need special attention.
+
+As you run each command, pause and name what changed: source file, object file, executable, register value, memory value, exit code, printed output, or test result.</p>
               <p><strong>Lab:</strong> Implement power of two check and bit count starter.</p>
               <p><strong>Done when:</strong> You can explain how flags and masks build low level logic.</p>
             </div>
@@ -232,6 +288,10 @@
             </summary>
             <div class="lesson-body">
               <p><strong>Outcome:</strong> Learn two’s complement, sign extension, signed vs unsigned jumps, overflow.</p>
+              <p><strong>Practical application:</strong> You learn that the same bits can mean different numbers. Signedness bugs are common in security, parsing, and boundary checks.</p>
+              <p><strong>What to learn from the commands:</strong> Separate signed and unsigned tests teach when to use <code>jl</code> versus <code>jb</code>. Edge values teach why overflow changes interpretation.
+
+As you run each command, pause and name what changed: source file, object file, executable, register value, memory value, exit code, printed output, or test result.</p>
               <p><strong>Lab:</strong> Write min/max for signed and unsigned inputs and test edge cases.</p>
               <p><strong>Done when:</strong> You know when to use <code>jl</code> vs <code>jb</code>.</p>
             </div>
@@ -243,6 +303,10 @@
             </summary>
             <div class="lesson-body">
               <p><strong>Outcome:</strong> Learn external symbols, <code>printf</code>, stack alignment before calls, and varargs basics.</p>
+              <p><strong>Practical application:</strong> You learn how to call real library functions safely. This is where hand-written assembly starts joining normal software ecosystems.</p>
+              <p><strong>What to learn from the commands:</strong> The link command teaches external symbols. Running <code>printf</code> teaches stack alignment and why <code>xor eax, eax</code> matters for variadic calls.
+
+As you run each command, pause and name what changed: source file, object file, executable, register value, memory value, exit code, printed output, or test result.</p>
               <p><strong>Lab:</strong> Call <code>printf</code> from assembly with integer output.</p>
               <p><strong>Done when:</strong> You can use libc without corrupting the stack.</p>
             </div>
@@ -254,6 +318,10 @@
             </summary>
             <div class="lesson-body">
               <p><strong>Outcome:</strong> Use <code>malloc</code>, <code>free</code>, and understand heap pointers from assembly.</p>
+              <p><strong>Practical application:</strong> You learn heap ownership from assembly. Allocation, use, and freeing become explicit instead of hidden behind high-level syntax.</p>
+              <p><strong>What to learn from the commands:</strong> <code>malloc</code> returning a pointer teaches how heap memory enters your program. <code>free</code> teaches that ownership must be completed, not just obtained.
+
+As you run each command, pause and name what changed: source file, object file, executable, register value, memory value, exit code, printed output, or test result.</p>
               <p><strong>Lab:</strong> Allocate an array, fill it, print values, and free it.</p>
               <p><strong>Done when:</strong> You can cross from assembly into runtime services.</p>
             </div>
@@ -265,6 +333,10 @@
             </summary>
             <div class="lesson-body">
               <p><strong>Outcome:</strong> Implement reusable <code>strlen</code>, <code>strcmp</code>, <code>memcpy</code>, and <code>memset</code> subsets.</p>
+              <p><strong>Practical application:</strong> You learn to build reusable primitives. Serious systems are built by composing small, tested routines.</p>
+              <p><strong>What to learn from the commands:</strong> Creating a tiny library teaches object files and archives. Running tests against it teaches that reusable code needs stable behavior, not just one demo.
+
+As you run each command, pause and name what changed: source file, object file, executable, register value, memory value, exit code, printed output, or test result.</p>
               <p><strong>Lab:</strong> Create <code>libtinyasm.a</code> and link tests against it.</p>
               <p><strong>Done when:</strong> You start thinking in reusable primitives.</p>
             </div>
@@ -276,6 +348,10 @@
             </summary>
             <div class="lesson-body">
               <p><strong>Outcome:</strong> Understand deterministic hashing, byte mixing, modulo/capacity, and collisions.</p>
+              <p><strong>Practical application:</strong> You learn how strings become deterministic numbers. Hashing is the doorway into hash maps, caches, sets, deduplication, and indexing.</p>
+              <p><strong>What to learn from the commands:</strong> <code>make day-19</code> compares your FNV-1a output to known vectors. Matching vectors teaches that every byte and multiply must be exactly right.
+
+As you run each command, pause and name what changed: source file, object file, executable, register value, memory value, exit code, printed output, or test result.</p>
               <p><strong>Lab:</strong> Implement FNV-1a hash for null terminated strings.</p>
               <p><strong>Done when:</strong> Your hash output matches known test vectors.</p>
             </div>
@@ -287,6 +363,10 @@
             </summary>
             <div class="lesson-body">
               <p><strong>Outcome:</strong> Learn buckets, entries, keys, values, capacity, load factor, and separate chaining.</p>
+              <p><strong>Practical application:</strong> You learn to design memory before writing code. A hash map is mostly a set of layout and ownership decisions made visible.</p>
+              <p><strong>What to learn from the commands:</strong> Reading the constants teaches how C fields become assembly offsets. <code>make day-20</code> runs the current hash map tests so the design stays executable.
+
+As you run each command, pause and name what changed: source file, object file, executable, register value, memory value, exit code, printed output, or test result.</p>
               <p><strong>Lab:</strong> Design the structs and constants for a string to int hash map.</p>
               <p><strong>Done when:</strong> You can draw memory layout for the table.</p>
             </div>
@@ -298,6 +378,10 @@
             </summary>
             <div class="lesson-body">
               <p><strong>Outcome:</strong> Write <code>hm_init</code> to allocate buckets and initialize fields.</p>
+              <p><strong>Practical application:</strong> You learn initialization and cleanup, two habits that separate toy code from reliable systems code.</p>
+              <p><strong>What to learn from the commands:</strong> <code>make day-21</code> exercises <code>hm_init</code> and <code>hm_free</code>. The tests teach that valid capacity, zeroed buckets, size zero, and cleanup are observable invariants.
+
+As you run each command, pause and name what changed: source file, object file, executable, register value, memory value, exit code, printed output, or test result.</p>
               <p><strong>Lab:</strong> Implement init/free skeleton with C harness.</p>
               <p><strong>Done when:</strong> A new map has valid capacity, size 0, and null buckets.</p>
             </div>
@@ -309,6 +393,10 @@
             </summary>
             <div class="lesson-body">
               <p><strong>Outcome:</strong> Handle key copying, value storage, next pointers, and failure paths.</p>
+              <p><strong>Practical application:</strong> You learn safe allocation paths. Real low-level code must handle the moment where one allocation succeeds and the next one fails.</p>
+              <p><strong>What to learn from the commands:</strong> The hash map test teaches that entries own copied keys. ASAN teaches whether cleanup avoids leaks and invalid frees under normal paths.
+
+As you run each command, pause and name what changed: source file, object file, executable, register value, memory value, exit code, printed output, or test result.</p>
               <p><strong>Lab:</strong> Implement entry creation with <code>malloc</code> and <code>strdup</code> or manual copy.</p>
               <p><strong>Done when:</strong> No leaks on allocation failure.</p>
             </div>
@@ -320,6 +408,10 @@
             </summary>
             <div class="lesson-body">
               <p><strong>Outcome:</strong> Implement bucket index, collision chain traversal, update existing key, insert new key.</p>
+              <p><strong>Practical application:</strong> You learn insertion through hashing, indexing, and pointer linking. This is where abstract data structures become memory operations.</p>
+              <p><strong>What to learn from the commands:</strong> The target teaches that hash modulo capacity selects a bucket. Collision tests teach that prepending a node is just pointer rewiring.
+
+As you run each command, pause and name what changed: source file, object file, executable, register value, memory value, exit code, printed output, or test result.</p>
               <p><strong>Lab:</strong> Write <code>hm_put(map,key,value)</code>.</p>
               <p><strong>Done when:</strong> Inserts and updates pass tests.</p>
             </div>
@@ -331,6 +423,10 @@
             </summary>
             <div class="lesson-body">
               <p><strong>Outcome:</strong> Implement search through a bucket chain and return found status/value.</p>
+              <p><strong>Practical application:</strong> You learn lookup and update. Efficient data structures are about finding the right memory without scanning everything.</p>
+              <p><strong>What to learn from the commands:</strong> The tests teach hit versus miss behavior. The update case teaches that changing an existing value must not grow <code>map.size</code>.
+
+As you run each command, pause and name what changed: source file, object file, executable, register value, memory value, exit code, printed output, or test result.</p>
               <p><strong>Lab:</strong> Write <code>hm_get(map,key,out_value)</code>.</p>
               <p><strong>Done when:</strong> Lookups pass hit, miss, and collision tests.</p>
             </div>
@@ -342,6 +438,10 @@
             </summary>
             <div class="lesson-body">
               <p><strong>Outcome:</strong> Unlink nodes in singly linked chains, free key and entry, update size.</p>
+              <p><strong>Practical application:</strong> You learn deletion in linked structures. Removing a node safely is one of the clearest tests of pointer discipline.</p>
+              <p><strong>What to learn from the commands:</strong> The delete tests teach head, middle, tail, and missing-key cases. Each case shows why you track the link that points to the node, not only the node.
+
+As you run each command, pause and name what changed: source file, object file, executable, register value, memory value, exit code, printed output, or test result.</p>
               <p><strong>Lab:</strong> Write <code>hm_delete(map,key)</code>.</p>
               <p><strong>Done when:</strong> Delete head, middle, tail, and missing keys correctly.</p>
             </div>
@@ -353,6 +453,10 @@
             </summary>
             <div class="lesson-body">
               <p><strong>Outcome:</strong> Grow capacity when load factor is high; move nodes without reallocating keys.</p>
+              <p><strong>Practical application:</strong> You learn integration. A data structure is not finished when one function works. It is finished when the operations work together without corrupting ownership.</p>
+              <p><strong>What to learn from the commands:</strong> <code>make test-hashmap</code> checks behavior. <code>make test-hashmap-asan</code> checks memory safety signals such as invalid access and leaks.
+
+As you run each command, pause and name what changed: source file, object file, executable, register value, memory value, exit code, printed output, or test result.</p>
               <p><strong>Lab:</strong> Implement <code>hm_resize</code> and integrate into put.</p>
               <p><strong>Done when:</strong> Map remains correct after many inserts.</p>
             </div>
@@ -364,6 +468,10 @@
             </summary>
             <div class="lesson-body">
               <p><strong>Outcome:</strong> Use C test harnesses, sanitizers where possible, randomized tests, and invariants.</p>
+              <p><strong>Practical application:</strong> You learn that tests are executable understanding. They document what your assembly promises to do.</p>
+              <p><strong>What to learn from the commands:</strong> Adding a test before code teaches discipline. Running the suite after every change teaches whether your mental model matches the machine.
+
+As you run each command, pause and name what changed: source file, object file, executable, register value, memory value, exit code, printed output, or test result.</p>
               <p><strong>Lab:</strong> Create a test suite for all hash map operations.</p>
               <p><strong>Done when:</strong> Failures identify exact operation and case.</p>
             </div>
@@ -375,6 +483,10 @@
             </summary>
             <div class="lesson-body">
               <p><strong>Outcome:</strong> Learn pointer chasing, branch prediction, locality, capacity choice, and profiling basics.</p>
+              <p><strong>Practical application:</strong> You learn performance only after correctness. Speed work is meaningful when you can prove the code still behaves.</p>
+              <p><strong>What to learn from the commands:</strong> The benchmark commands teach timing, but the first command is still correctness. Passing tests first prevents performance work from hiding memory bugs.
+
+As you run each command, pause and name what changed: source file, object file, executable, register value, memory value, exit code, printed output, or test result.</p>
               <p><strong>Lab:</strong> Benchmark hash map operations and compare chain lengths.</p>
               <p><strong>Done when:</strong> You can explain why data layout matters.</p>
             </div>
@@ -386,6 +498,10 @@
             </summary>
             <div class="lesson-body">
               <p><strong>Outcome:</strong> Clean API, docs, Makefile, tests, examples, and error handling.</p>
+              <p><strong>Practical application:</strong> You learn packaging and handoff. A fresh clone should be able to build, test, and understand the project without you explaining it live.</p>
+              <p><strong>What to learn from the commands:</strong> <code>make test</code> teaches reproducibility. Reading the README as if you are new teaches whether the project can stand on its own.
+
+As you run each command, pause and name what changed: source file, object file, executable, register value, memory value, exit code, printed output, or test result.</p>
               <p><strong>Lab:</strong> Finish <code>hashmap.s</code>, <code>hashmap.h</code>, <code>test_hashmap.c</code>, and <code>README</code>.</p>
               <p><strong>Done when:</strong> A fresh clone can run <code>make test</code>.</p>
             </div>
@@ -397,6 +513,10 @@
             </summary>
             <div class="lesson-body">
               <p><strong>Outcome:</strong> Solidify mastery by explaining and extending your map.</p>
+              <p><strong>Practical application:</strong> You learn mastery by teaching and extending. If you can explain every instruction and safely add a feature, the knowledge is becoming yours.</p>
+              <p><strong>What to learn from the commands:</strong> The final commands should prove the extension did not break the baseline. The written explanation teaches whether you understand the why, not only the what.
+
+As you run each command, pause and name what changed: source file, object file, executable, register value, memory value, exit code, printed output, or test result.</p>
               <p><strong>Lab:</strong> Write a guided explanation of your hash map and add one feature: iteration, string values, or custom allocator.</p>
               <p><strong>Done when:</strong> You can explain every instruction and every byte of layout.</p>
             </div>
@@ -408,13 +528,9 @@
         <div class="section-heading">
           <p class="eyebrow">Local source</p>
           <h2>Full working repo on the VPS.</h2>
-          <p>
-            The full course files, Makefile, assembly labs, C test harnesses, and hash map implementation live at:
-          </p>
+          <p>The full course files, Makefile, assembly labs, C test harnesses, and hash map implementation live at:</p>
           <pre><code>/home/reign/assembly-by-hand-30-days</code></pre>
-          <p>
-            Run <code>make test</code> or <code>make test-hashmap-asan</code> from that directory to verify the labs.
-          </p>
+          <p>Run <code>make test</code> or <code>make test-hashmap-asan</code> from that directory to verify the labs.</p>
         </div>
       </section>
     </main>
