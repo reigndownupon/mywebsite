@@ -227,6 +227,20 @@
 
         <div class="article-list">
           <article class="blog-post">
+            <p class="date">June 19, 2026 · AI and Cybersecurity</p>
+            <h3>When an AI Agent Browses the Web, Localhost Is Not a Sanctuary</h3>
+            <p class="article-source">
+              Source: <a href="https://www.microsoft.com/en-us/security/blog/2026/06/18/autojack-single-page-rce-host-running-ai-agent/" target="_blank" rel="noopener">Microsoft Security on AutoJack and AI agent host risk</a>
+            </p>
+            <p>Microsoft’s AutoJack research is a helpful warning for anyone building with AI agents: once an agent can browse untrusted web pages and talk to local tools, old assumptions about “safe” boundaries start to break down.</p>
+            <p>The issue Microsoft described involved AutoGen Studio’s MCP WebSocket surface. In simple terms, a malicious web page rendered by an AI browsing agent could reach a local service and trigger process execution on the host. Microsoft notes this specific chain was hardened upstream and was not present in the PyPI release, which matters. This is not a reason to panic. But it is a reason to pay attention.</p>
+            <p>The larger lesson is bigger than one framework. AI agents are useful because they can do things: read files, call tools, browse pages, connect to APIs, and automate workflows. But every new capability is also a new responsibility. If an agent can touch the open internet and privileged local services in the same flow, then “localhost” is no longer a magic wall. It becomes part of the attack surface.</p>
+            <p>This is where technical design and moral stewardship meet. Security is not just about protecting systems. It is about protecting the people who trust those systems with their work, data, homes, ministries, and businesses. A tool that is powerful but poorly bounded can become a doorway for harm.</p>
+            <p>Practical takeaways are straightforward: authenticate local control planes, isolate agent tools, limit what agents can execute, avoid exposing sensitive services without authorization, and treat prototypes as prototypes. Developer convenience is valuable, but it should not outrank truthfulness about risk.</p>
+            <p>From a faith-shaped perspective, this is a neighbor-love issue. We should build AI systems with humility, not hype. We should assume limits are necessary, not annoying. And we should remember that trustworthy technology is not technology that can do everything. It is technology governed by wisdom, restraint, and care for the people on the other side of the screen.</p>
+          </article>
+
+          <article class="blog-post">
             <p class="date">June 18, 2026 · Privacy and Cybersecurity</p>
             <h3>Privacy Is Not Paranoia When Power Is Abused</h3>
             <p class="article-source">
