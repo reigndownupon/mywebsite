@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Faith-shaped cybersecurity, privacy, AI, and technology articles from Reigndownupon."
+    >
+    <title>Blog | Reigndownupon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html#top" aria-label="Reigndownupon home">
+        <span class="brand-mark">R</span>
+        <span>Reigndownupon</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html#about">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="daily-jesus.html">Daily Jesus</a>
+        <a href="blog.html">Blog</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+
+      <button class="theme-toggle" type="button" aria-label="Switch color theme">
+        <span class="theme-label" aria-hidden="true">Theme:</span>
+        <span class="theme-text">Light</span>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="section project-hero">
+        <p class="eyebrow">Blog</p>
+        <h1>Faith and cybersecurity writing.</h1>
+        <p class="hero-copy">Cybersecurity, privacy, AI, and technology reflections shaped by truth, human dignity, and neighbor-love.</p>
+      </section>
+
+      <section class="section blog" id="blog">
+        <div class="section-heading">
+          <p class="eyebrow">Blog / Articles</p>
+          <h2>Faith and Cybersecurity.</h2>
+          <p>
+            Thoughts on the latest cybersecurity articles from a faith based perspective.
+          </p>
+        </div>
+
+        <div class="article-list">
+          <article class="blog-post">
+            <p class="date">June 19, 2026 · AI and Cybersecurity</p>
+            <h3>When an AI Agent Browses the Web, Localhost Is Not a Sanctuary</h3>
+            <p class="article-source">
+              Source: <a href="https://www.microsoft.com/en-us/security/blog/2026/06/18/autojack-single-page-rce-host-running-ai-agent/" target="_blank" rel="noopener">Microsoft Security on AutoJack and AI agent host risk</a>
+            </p>
+            <p>Microsoft’s AutoJack research is a helpful warning for anyone building with AI agents: once an agent can browse untrusted web pages and talk to local tools, old assumptions about “safe” boundaries start to break down.</p>
+            <p>The issue Microsoft described involved AutoGen Studio’s MCP WebSocket surface. In simple terms, a malicious web page rendered by an AI browsing agent could reach a local service and trigger process execution on the host. Microsoft notes this specific chain was hardened upstream and was not present in the PyPI release, which matters. This is not a reason to panic. But it is a reason to pay attention.</p>
+            <p>The larger lesson is bigger than one framework. AI agents are useful because they can do things: read files, call tools, browse pages, connect to APIs, and automate workflows. But every new capability is also a new responsibility. If an agent can touch the open internet and privileged local services in the same flow, then “localhost” is no longer a magic wall. It becomes part of the attack surface.</p>
+            <p>This is where technical design and moral stewardship meet. Security is not just about protecting systems. It is about protecting the people who trust those systems with their work, data, homes, ministries, and businesses. A tool that is powerful but poorly bounded can become a doorway for harm.</p>
+            <p>Practical takeaways are straightforward: authenticate local control planes, isolate agent tools, limit what agents can execute, avoid exposing sensitive services without authorization, and treat prototypes as prototypes. Developer convenience is valuable, but it should not outrank truthfulness about risk.</p>
+            <p>From a faith-shaped perspective, this is a neighbor-love issue. We should build AI systems with humility, not hype. We should assume limits are necessary, not annoying. And we should remember that trustworthy technology is not technology that can do everything. It is technology governed by wisdom, restraint, and care for the people on the other side of the screen.</p>
+          </article>
+
+          <article class="blog-post">
+            <p class="date">June 18, 2026 · Privacy and Cybersecurity</p>
+            <h3>Privacy Is Not Paranoia When Power Is Abused</h3>
+            <p class="article-source">
+              Source: <a href="https://citizenlab.ca/how-freedom-tech-is-pushing-back-against-digital-authoritarianism/" target="_blank" rel="noopener">Citizen Lab on freedom tech and digital authoritarianism</a>
+            </p>
+            <p>Citizen Lab’s short piece on “Freedom Tech” points to a reality that should concern more than security professionals. Spyware and surveillance tools do not stay abstract for long. They touch phones, messages, relationships, movements, families, and sometimes people’s physical safety.</p>
+            <p>The article highlights comments from Citizen Lab researchers about lagging legal safeguards and the incentives that allow spyware to spread. One line stood out: companies’ incentives often do not align with personal privacy. That is a sober way of saying something many people feel but cannot always name. The tools are powerful, the oversight is weak, and ordinary people are often left to carry the risk.</p>
+            <p>This is why privacy should not be dismissed as paranoia. In a world where devices can become tracking tools and private communications can become leverage, privacy is part of human dignity. It gives people room to think, speak, repent, heal, organize, worship, report abuse, and ask for help without unnecessary exposure.</p>
+            <p>The good news is that there are practical steps. Citizen Lab points readers toward tools and resources like Apple’s Lockdown Mode, Security Planner, and Access Now’s helpline. Not everyone needs the same level of protection, but everyone deserves honest guidance instead of fear.</p>
+            <p>For churches, nonprofits, families, and small teams, this is a discipleship and stewardship issue too. Who in our community is more exposed than they realize? Mission workers, abuse survivors, journalists, activists, pastors handling sensitive care, and young people navigating online pressure may all need better protection.</p>
+            <p>The way of Jesus teaches us to pay attention to the vulnerable, not just the powerful. In technology, that means asking who can be watched, pressured, silenced, or exploited, and then using our skill to protect them.</p>
+            <p>Privacy is not about hiding wrongdoing. Often, it is about guarding what is precious from those who would misuse power.</p>
+          </article>
+
+          <article class="blog-post">
+            <p class="date">June 17, 2026 · Privacy and Cybersecurity</p>
+            <h3>When Surveillance Tools Outrun Accountability</h3>
+            <p class="article-source">
+              Source: <a href="https://www.schneier.com/blog/archives/2026/06/flock-cameras-are-being-used-for-stalking.html" target="_blank" rel="noopener">Schneier on Security on Flock cameras and stalking</a>
+            </p>
+            <p>A tool built for safety can still become a tool of harm when accountability is weak.</p>
+            <p>Schneier’s post points to reports of police officers using Flock camera systems to stalk people. That should sober all of us, not because every use of camera based public safety technology is automatically wrong, but because powerful systems always carry the possibility of insider abuse. The issue is not only whether a tool can help solve crimes. The issue is also whether the people being watched have meaningful protection from misuse.</p>
+            <p>This is where cybersecurity, privacy, and moral responsibility overlap. Access control is not just a technical checkbox. Audit logs are not just compliance paperwork. Review processes, warrant standards, role based access, alerts for unusual searches, and real consequences for abuse are ways of saying: people are not data points to be casually queried.</p>
+            <p>From a Jesus shaped view of power, authority is meant to serve and protect, not dominate or indulge private desire. That does not answer every policy question by itself, but it does give us a moral direction. The stronger the surveillance capability, the stronger the accountability must be. The more sensitive the data, the more carefully access should be limited. The more invisible the monitoring is to ordinary people, the more transparent governance needs to become.</p>
+            <p>Public safety technologies should be judged not only by what they make possible for investigators, but by what they make possible for victims, insiders, and the vulnerable. If a system can quietly expose someone’s movements, then it needs more than trust in good intentions. It needs restraints, oversight, and a culture that treats misuse as a serious violation of human dignity.</p>
+            <p>Security should protect neighbors. When it becomes a shortcut around consent, privacy, or accountability, it stops looking like protection and starts looking like power without wisdom.</p>
+          </article>
+
+          <article class="blog-post">
+            <p class="date">June 16, 2026 · Privacy and Cybersecurity</p>
+            <h3>Fighting Scams Without Building a Surveillance Habit</h3>
+            <p class="article-source">
+              Source: <a href="https://www.schneier.com/blog/archives/2026/06/the-fcc-wants-to-eliminate-burner-phones.html" target="_blank" rel="noopener">Schneier on Security on the FCC and burner phones</a>
+            </p>
+            <p>Scams are real. Robocalls, fraud campaigns, impersonation, and phone-based abuse hurt people every day. So when regulators look for ways to make telecom providers know who is using their networks, the motivation is understandable.</p>
+            <p>But Bruce Schneier’s summary of a proposed FCC rule raises the harder question: how much identity collection should become normal in the name of stopping abuse?</p>
+            <p>The proposal, as described, would push telecom companies to collect and retain more personal information from phone customers, including government identification numbers and physical addresses. The goal is to make it harder for scammers to hide behind anonymous or loosely registered phone service. That sounds reasonable at first glance. Accountability matters.</p>
+            <p>But privacy also matters. Anonymous or low-friction phone access is not only useful to criminals. It can matter for people leaving abuse, journalists protecting sources, whistleblowers, activists, vulnerable communities, and ordinary people who simply do not want every communication tool tied to a permanent identity trail.</p>
+            <p>A wise society should resist false choices. We do not have to choose between “let scammers run wild” and “collect everyone’s identity by default.” The better path is narrower, more accountable, and more carefully measured.</p>
+            <p>That means asking: Will this actually reduce scams, or will criminals route around it while normal people lose privacy? How will telecoms secure the new identity data they collect? Who can access it? How long is it retained? What happens when it is breached? What exceptions exist for people at risk? What oversight prevents mission creep?</p>
+            <p>The deeper issue is more than convenience. People are not merely risk profiles in a database. They are image-bearers with dignity, safety concerns, and real-world vulnerabilities. Protecting the public from fraud is good. Building unnecessary surveillance habits is not.</p>
+            <p>The best security policies protect people twice: first from criminals, and then from overreach. If we want trust, we need tools that are effective, limited, transparent, and accountable.</p>
+          </article>
+
+          <article class="blog-post">
+            <p class="date">June 15, 2026 · AI and Cybersecurity</p>
+            <h3>Hosted AI Is a Dependency, Not a Foundation</h3>
+            <p class="article-source">
+              Source: <a href="https://snyk.io/blog/fable-mythos-suspension-security-takeaways/" target="_blank" rel="noopener">Snyk on AI model suspension and security teams</a>
+            </p>
+            <p>Snyk’s writeup on the reported Fable 5 and Mythos 5 suspension is worth reading less as model drama and more as a warning about dependency.</p>
+            <p>According to Snyk, Anthropic disabled access to Claude Fable 5 and Claude Mythos 5 worldwide after receiving a U.S. export control directive. The reported concern involved a possible jailbreak connected to code analysis and vulnerability fixing. Anthropic reportedly argued that the capability in question is also a normal defensive security workflow: asking a model to read code and help fix flaws.</p>
+            <p>That tension is not going away. The same AI capability that helps defenders find and remediate weaknesses can also help attackers understand them. Security teams cannot pretend powerful tools are harmless. But they also cannot build modern defensive workflows as if any one hosted model will always be available, always allowed, always stable, and always governed in a way that matches their operational needs.</p>
+            <p>The practical takeaway is simple: treat AI like part of your supply chain.</p>
+            <p>Know where your organization uses AI. Know which workflows depend on a single provider. Know what happens if that provider changes terms, loses availability, disables a model, or becomes subject to a government order. Have fallback paths. Keep human review in the loop. Scan AI generated code. Log meaningful decisions. Do not let convenience quietly become fragility.</p>
+            <p>There is a wisdom issue here too. Technology often tempts us to confuse speed with strength. But a system that moves fast while depending on one opaque, revocable service may not be strong. It may just be moving quickly on borrowed stability.</p>
+            <p>AI can be a useful assistant. It can help us write, review, test, summarize, and secure. But it should not become a substitute for judgment, accountability, or resilient design.</p>
+            <p>If we are going to use powerful tools, we should use them truthfully: with gratitude for what they can do, honesty about what they cannot guarantee, and enough humility to build systems that can keep serving people when the tool disappears.</p>
+          </article>
+
+          <article class="blog-post">
+            <p class="date">June 14, 2026 · AI and Cybersecurity</p>
+            <h3>AI Scams Are a Trust Problem Before They Are a Tech Problem</h3>
+            <p class="article-source">
+              Source: <a href="https://blog.google/innovation-and-ai/technology/safety-security/combatting-ai-scams/" target="_blank" rel="noopener">Google Safety &amp; Security on combating AI scams</a>
+            </p>
+            <p>Google published an update on its efforts to fight AI powered scams, including a lawsuit aimed at a cybercrime network it calls the “Outsider Enterprise.” According to Google, the group uses phishing kits, fake websites, brand impersonation, and mass text message campaigns to steal passwords, payment information, and money.</p>
+            <p>The numbers are sobering. Google says the operation is connected to 9,000 fake websites, more than 1 million fraudulent URLs, and millions of scam messages. In a two week period in May 2026, Android users flagged 55,000 spam texts, while Google says 2.5 million related messages were sent to Android users.</p>
+            <p>This is where the AI conversation has to grow up. AI is not only a productivity tool or a shiny assistant. In the hands of criminals, it can make deception cheaper, faster, and more convincing. Fake package alerts, urgent bank warnings, and “your account is compromised” messages are not just annoying. They are attacks on trust.</p>
+            <p>Scams work by rushing people. They create fear, pressure, and confusion so someone acts before they have time to think. That matters because the people most at risk are often the tired, distracted, elderly, overwhelmed, or trusting, the very people security should be designed to protect.</p>
+            <p>Google’s response combines legal action, FBI coordination, telecom partnerships, product level protections, and legislative advocacy. That layered approach matters because no single person can solve this alone. Users need better tools. Companies need accountability. Law enforcement needs coordination. Families, churches, schools, and communities need plain language education.</p>
+            <p>A few practical reminders still matter: do not click urgent links from unexpected texts, do not enter passwords through message links, verify directly through the official app or website, and slow down when a message tries to create panic. Urgency is often the attacker’s favorite weapon.</p>
+            <p>AI may change the scale of scams, but the heart of the issue is old: deception for gain. The response should be truthful, protective, patient, and wise.</p>
+          </article>
+        </div>
+      </section>
+
+    </main>
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> Reigndownupon. All are welcome.</p>
+      <a href="#top">Back to top</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

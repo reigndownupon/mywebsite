@@ -260,6 +260,23 @@ h4 {
   margin-bottom: 2rem;
 }
 
+.section-heading-row {
+  display: flex;
+  max-width: none;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.section-heading-row > div {
+  max-width: 46rem;
+}
+
+.section-heading-row .button {
+  flex: 0 0 auto;
+  margin-bottom: 0.25rem;
+}
+
 .path-grid,
 .article-grid,
 .credential-grid {
@@ -505,6 +522,11 @@ textarea {
   .archive-grid,
   .credential-grid {
     grid-template-columns: 1fr;
+  }
+
+  .section-heading-row {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .hero {

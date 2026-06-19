@@ -16,9 +16,15 @@ themeToggle.addEventListener("click", () => {
   setTheme(body.classList.contains("dark") ? "light" : "dark");
 });
 
-document.querySelector("#year").textContent = new Date().getFullYear();
+const year = document.querySelector("#year");
+if (year) {
+  year.textContent = new Date().getFullYear();
+}
 
-document.querySelector(".contact-form").addEventListener("submit", (event) => {
-  event.preventDefault();
-  alert("This form is a visual placeholder for now. I can connect it before launch.");
-});
+const contactForm = document.querySelector(".contact-form");
+if (contactForm) {
+  contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    alert("This form is a visual placeholder for now. I can connect it before launch.");
+  });
+}
