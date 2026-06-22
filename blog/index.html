@@ -55,6 +55,22 @@
 
         <div class="article-list">
           <article class="blog-post">
+            <p class="date">June 22, 2026 · AI and Cybersecurity</p>
+            <h3>AI Agents Need Guardrails, Not Just Faster Deploys</h3>
+            <p class="article-source">
+              Source: <a href="https://blog.cloudflare.com/temporary-accounts/" target="_blank" rel="noopener">Cloudflare on temporary accounts for AI agents</a>
+            </p>
+            <p>Cloudflare announced Temporary Accounts for AI agents, a new way for an agent to run wrangler deploy --temporary and deploy a Worker without first going through a normal sign up flow. The deployment stays live for 60 minutes. A person can claim it and make it permanent, or it expires automatically.</p>
+            <p>I understand why this matters. AI coding agents are getting better at building, testing, and iterating. But deployment is where the digital world stops being theoretical. Once something is live, even briefly, it can affect users, data, reputation, cost, and trust.</p>
+            <p>That makes this more than a developer convenience story. It is an accountability story.</p>
+            <p>Temporary access can be wise when it is bounded. A 60 minute lifespan is a meaningful limit. A claim step brings a human back into ownership. Automatic deletion helps reduce abandoned resources. Those are good patterns because they recognize that speed without stewardship becomes risk.</p>
+            <p>But teams should still ask careful questions before letting agents deploy anything, even temporarily. What can the agent access? Can it expose secrets? Can it connect to production data? Who reviews the output? Are logs retained? Is there a naming and cleanup process? Is this being used only for experiments, or could it quietly become a shadow production path?</p>
+            <p>The goal should not be to make AI agents frictionless at any cost. The goal should be to make responsible work smoother while keeping human accountability clear. In security, identity matters. Ownership matters. Expiration matters. Review matters.</p>
+            <p>Fast tools are not bad. Powerful tools are not bad. But power should be shaped by wisdom, service, and protection. We should be honest about what AI agents can do, humble about what they may get wrong, and careful with the systems we allow them to touch.</p>
+            <p>If your team is experimenting with AI agents, treat temporary deployments as a sandbox, not a loophole. Keep the limits visible. Keep humans responsible. Keep production protected.</p>
+          </article>
+
+          <article class="blog-post">
             <p class="date">June 21, 2026 · macOS Security</p>
             <h3>When Your Mac Asks You to Slow Down</h3>
             <p class="article-source">
