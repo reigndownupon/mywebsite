@@ -1,4 +1,8 @@
-Contact: https://github.com/reigndownupon/mywebsite/issues
+# Security policy for reigndownupon.us
+# Responsible disclosure is welcomed and appreciated.
+# Please report vulnerabilities privately before any public disclosure.
+
+Contact: mailto:travisl.codex@gmail.com
+Expires: 2027-06-24T00:00:00.000Z
 Preferred-Languages: en
 Canonical: https://reigndownupon.us/.well-known/security.txt
-Expires: 2027-06-23T00:00:00Z
