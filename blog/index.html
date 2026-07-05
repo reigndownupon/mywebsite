@@ -8,12 +8,6 @@
       content="All faith-shaped cybersecurity, privacy, AI, and technology articles from Reigndownupon."
     >
     <title>Blog | Reigndownupon</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap"
-      rel="stylesheet"
-    >
     <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
@@ -27,29 +21,35 @@
         <a href="/about/">About</a>
         <a href="/projects/">Projects</a>
         <a href="/dailyjesus/">Daily Jesus</a>
-        <a href="/blog/">Blog</a>
+        <a href="/blog/" aria-current="page">Blog</a>
         <a href="/contact/">Contact</a>
       </nav>
-
-      <button class="theme-toggle" type="button" aria-label="Switch color theme">
-        <span class="theme-label" aria-hidden="true">Theme:</span>
-        <span class="theme-text">Light</span>
-      </button>
     </header>
 
-    <main id="top">
-      <section class="section project-hero">
-        <p class="eyebrow">Blog</p>
-        <h1>Faith and cybersecurity writing.</h1>
-        <p class="hero-copy">Cybersecurity, privacy, AI, and technology reflections shaped by truth, human dignity, and neighbor-love.</p>
-      </section>
+    <section class="hero" id="top">
+      <div class="mark">Blog</div>
+      <h1>Faith and <span class="warm">Cybersecurity</span> Writing</h1>
+      <p class="tag">Cybersecurity, privacy, AI, and technology reflections shaped by truth, human dignity, and neighbor-love.</p>
+    </section>
 
-      <section class="section blog" id="blog">
+    <nav class="toc" aria-label="Blog contents">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#blog"><span class="n">01</span> Article Archive</a></li>
+        <li><a href="#blog"><span class="n">02</span> AI and Cybersecurity</a></li>
+        <li><a href="#blog"><span class="n">03</span> Privacy and Power</a></li>
+        <li><a href="#blog"><span class="n">04</span> Practical Protection</a></li>
+      </ol>
+    </nav>
+
+    <main class="wrap">
+      <section id="blog">
         <div class="section-heading">
-          <p class="eyebrow">Blog / Articles</p>
+          <div class="kicker">Archive</div>
           <h2>Faith and Cybersecurity.</h2>
           <p>
-            Thoughts on the latest cybersecurity articles from a faith based perspective.
+            Thoughts on current cybersecurity articles from a faith-shaped perspective: warm, direct, self-aware,
+            pastoral, and practical.
           </p>
         </div>
 
@@ -203,6 +203,7 @@
 
     </main>
     <footer class="site-footer">
+      <p class="verse">Made to reflect the image of God.</p>
       <p>&copy; <span id="year"></span> Reigndownupon. All are welcome.</p>
       <a href="#top">Back to top</a>
     </footer>

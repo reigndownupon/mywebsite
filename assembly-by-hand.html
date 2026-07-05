@@ -8,12 +8,6 @@
       content="Assembly by Hand is a 30 day x86-64 assembly learning program that builds toward a working hash map capstone."
     >
     <title>Assembly by Hand | Reigndownupon</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap"
-      rel="stylesheet"
-    >
     <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
@@ -25,22 +19,17 @@
 
       <nav class="nav-links" aria-label="Main navigation">
         <a href="/about/">About</a>
-        <a href="/projects/">Projects</a>
+        <a href="/projects/" aria-current="page">Projects</a>
         <a href="/dailyjesus/">Daily Jesus</a>
         <a href="/blog/">Blog</a>
         <a href="/contact/">Contact</a>
       </nav>
-
-      <button class="theme-toggle" type="button" aria-label="Switch color theme">
-        <span class="theme-label" aria-hidden="true">Theme:</span>
-        <span class="theme-text">Light</span>
-      </button>
     </header>
 
     <main id="top">
       <section class="section project-hero">
         <p class="eyebrow">Project / Learning Program</p>
-        <h1>Assembly by Hand</h1>
+        <h1>Assembly by <span class="warm">Hand</span></h1>
         <p class="hero-copy">
           A 30 day, hands-on x86-64 assembly path for learning computer science fundamentals from the metal up. Each day now includes the practical reason for the lesson and what to notice as each command runs.
         </p>
@@ -535,6 +524,7 @@ As you run each command, pause and name what changed: source file, object file, 
     </main>
 
     <footer class="site-footer">
+      <p class="verse">Made to reflect the image of God.</p>
       <p>&copy; <span id="year"></span> Reigndownupon. All are welcome.</p>
       <a href="#top">Back to top</a>
     </footer>

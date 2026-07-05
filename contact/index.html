@@ -8,12 +8,6 @@
       content="Contact Reigndownupon about faith, AI projects, cybersecurity, encouragement, or collaboration."
     >
     <title>Contact | Reigndownupon</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap"
-      rel="stylesheet"
-    >
     <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
@@ -28,40 +22,51 @@
         <a href="/projects/">Projects</a>
         <a href="/dailyjesus/">Daily Jesus</a>
         <a href="/blog/">Blog</a>
-        <a href="/contact/">Contact</a>
+        <a href="/contact/" aria-current="page">Contact</a>
       </nav>
-
-      <button class="theme-toggle" type="button" aria-label="Switch color theme">
-        <span class="theme-label" aria-hidden="true">Theme:</span>
-        <span class="theme-text">Light</span>
-      </button>
     </header>
 
-    <main id="top">
-      <section class="section project-hero">
-        <p class="eyebrow">Contact</p>
-        <h1>Want to connect?</h1>
-        <p class="hero-copy">Reach out about faith, encouragement, AI projects, cybersecurity, or something else.</p>
-      </section>
+    <section class="hero" id="top">
+      <div class="mark">Contact</div>
+      <h1>Start a <span class="warm">Conversation</span></h1>
+      <p class="tag">Reach out about faith, encouragement, AI projects, cybersecurity, or something else worth thinking through carefully.</p>
+    </section>
 
-      <section class="section contact" id="contact">
+    <nav class="toc" aria-label="Contact page contents">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#contact"><span class="n">01</span> Send a Note</a></li>
+        <li><a href="#topics"><span class="n">02</span> Good Reasons to Reach Out</a></li>
+      </ol>
+    </nav>
+
+    <main class="wrap">
+      <section class="contact" id="contact">
         <div>
-          <p class="eyebrow">Contact</p>
+          <div class="kicker">01 &mdash; Send a note</div>
           <h2>Want to connect?</h2>
           <p>
-            This form is ready visually. Before launch, it can be connected to a service like Formspree, Basin, or another
-            static-site form provider so visitors can reach you without your email being displayed publicly.
+            Use the form to open a prepared email, or write directly to
+            <a href="mailto:contact@reigndownupon.us">contact@reigndownupon.us</a>.
           </p>
+          <div class="pull">
+            The best messages are usually simple: what you are working on, where you are stuck, and what kind of response would help.
+          </div>
         </div>
 
-        <form class="contact-form" action="#" method="post">
+        <form
+          class="contact-form"
+          action="mailto:contact@reigndownupon.us"
+          method="post"
+          enctype="text/plain"
+        >
           <label>
             Name
-            <input type="text" name="name" placeholder="Your name">
+            <input type="text" name="name" autocomplete="name">
           </label>
           <label>
             Email
-            <input type="email" name="email" placeholder="you@example.com">
+            <input type="email" name="email" autocomplete="email">
           </label>
           <label>
             What would you like to talk about?
@@ -74,13 +79,40 @@
           </label>
           <label>
             Message
-            <textarea name="message" rows="5" placeholder="Write your message here"></textarea>
+            <textarea name="message" rows="6"></textarea>
           </label>
-          <button class="button primary" type="submit">Send Message</button>
+          <button class="button primary" type="submit">Open Email</button>
         </form>
       </section>
+
+      <section id="topics">
+        <div class="kicker">02 &mdash; Good reasons to reach out</div>
+        <h2>Faith, learning, and practical help all belong here.</h2>
+        <div class="boundary">
+          <div class="card is">
+            <h4>Good topics</h4>
+            <ul>
+              <li>Faith and encouragement</li>
+              <li>AI experiments or writing workflows</li>
+              <li>Cybersecurity questions and article ideas</li>
+              <li>Projects that serve people more faithfully</li>
+            </ul>
+          </div>
+          <div class="card isnt">
+            <h4>Less helpful</h4>
+            <ul>
+              <li>Hype with no practical question</li>
+              <li>Requests that ignore privacy or consent</li>
+              <li>Security shortcuts that put people at risk</li>
+              <li>Advice that should come from a pastor, counselor, or lawyer</li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </main>
+
     <footer class="site-footer">
+      <p class="verse">Made to reflect the image of God.</p>
       <p>&copy; <span id="year"></span> Reigndownupon. All are welcome.</p>
       <a href="#top">Back to top</a>
     </footer>

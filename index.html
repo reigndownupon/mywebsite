@@ -5,20 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Reigndownupon is a personal and professional site sharing faith, AI, cybersecurity projects, and a welcoming story."
+      content="Reigndownupon is a personal home for faith, AI, cybersecurity, Scripture reflections, and practical learning."
     >
-    <title>Reigndownupon | Faith, AI, Cybersecurity, and Welcome</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap"
-      rel="stylesheet"
-    >
+    <title>Reigndownupon | Faith, Technology, and Welcome</title>
     <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="Reigndownupon home">
+      <a class="brand" href="/" aria-label="Reigndownupon home">
         <span class="brand-mark">R</span>
         <span>Reigndownupon</span>
       </a>
@@ -30,183 +24,155 @@
         <a href="/blog/">Blog</a>
         <a href="/contact/">Contact</a>
       </nav>
-
-      <button class="theme-toggle" type="button" aria-label="Switch color theme">
-        <span class="theme-label" aria-hidden="true">Theme:</span>
-        <span class="theme-text">Light</span>
-      </button>
     </header>
 
-    <main id="top">
-      <section class="hero section">
-        <div class="hero-content">
-          <p class="eyebrow">Faith, AI, cybersecurity, and people</p>
-          <h1>A Journey Through Faith, Technology, and Purpose</h1>
-          <p class="hero-copy">
-            Reigndownupon is a home for story, projects, experiments, and reflections. I am sharing what I am building,
-            what I am learning, and the hope that shapes the work. You are welcome to join me.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="/about/">Come and See</a>
-            <a class="button secondary" href="/contact/">Get in Touch</a>
-          </div>
-        </div>
+    <section class="hero" id="top">
+      <div class="mark">Faith &middot; AI &middot; Cybersecurity</div>
+      <h1>Faith, Technology, and <span class="warm">Welcome</span></h1>
+      <p class="tag">
+        A personal home for Scripture, practical security, careful AI, and the kind of learning that keeps people in view.
+      </p>
+      <div class="hero-actions">
+        <a class="button primary" href="/dailyjesus/">Read Daily Jesus</a>
+        <a class="button secondary" href="/blog/">Read the blog</a>
+      </div>
+    </section>
 
-        <div class="hero-scene">
+    <nav class="toc" aria-label="Homepage contents">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#center"><span class="n">01</span> The Center</a></li>
+        <li><a href="#paths"><span class="n">02</span> The Paths</a></li>
+        <li><a href="#work"><span class="n">03</span> Current Work</a></li>
+        <li><a href="#daily"><span class="n">04</span> Daily Jesus</a></li>
+        <li><a href="#writing"><span class="n">05</span> Recent Writing</a></li>
+        <li><a href="#contact"><span class="n">06</span> Connect</a></li>
+      </ol>
+    </nav>
+
+    <main class="wrap">
+      <section id="center">
+        <div class="kicker">01 &mdash; The center</div>
+        <h2>A table with room for everyone, and a hope that Jesus becomes clearer.</h2>
+        <p>
+          Reigndownupon is meant to be a space where faith, technology, questions, learning, and real life can sit at
+          the same table. You do not have to be an expert, have it all figured out, or know the right words before you
+          are welcome here. This is a place to come as you are, learn what you can, and keep paying attention to the
+          people on the other side of every tool, system, and story.
+        </p>
+        <div class="pull">
+          My hope is that through all of it, the Scripture, the writing, the projects, and even the security work, people
+          would see Jesus a little more clearly and feel invited to follow Him with honesty, humility, and courage.
+        </div>
+        <figure class="feature-image">
           <img
             src="/assets/hero-table-skyline.png"
             alt="A long woodland table with people gathered together and room for more"
           >
-        </div>
+        </figure>
       </section>
-      <section class="section intro" id="about-preview">
-        <div>
-          <p class="eyebrow">About</p>
-          <h2>A welcoming basecamp for the things you are building.</h2>
-        </div>
-        <div>
-          <p>
-            Reigndownupon is a home for faith, AI, cybersecurity, learning, and purpose. The full About page now has its own space.
-          </p>
-          <a class="button secondary" href="/about/">Read about Reigndownupon</a>
-        </div>
-      </section>
-      <section class="section paths" id="paths">
-        <div class="section-heading">
-          <p class="eyebrow">Choose a path</p>
-          <h2>Explore what is growing here.</h2>
-        </div>
 
+      <section id="paths">
+        <div class="kicker">02 &mdash; What you can explore</div>
+        <h2>Three paths, one posture.</h2>
         <div class="path-grid">
           <article class="path-card">
-            <span class="card-kicker">Faith</span>
-            <h3>Jesus-Daily</h3>
-            <p>Daily Scripture reflections meant to keep the day centered on Jesus, mercy, truth, and humble obedience.</p>
-            <a href="/dailyjesus/">Read today's reflection</a>
+            <div class="card-kicker">Faith</div>
+            <h3>Daily Jesus</h3>
+            <p>Short Scripture reflections with Jesus at the center, honest questions, and a practical next step.</p>
+            <a href="/dailyjesus/">Read the archive</a>
           </article>
 
           <article class="path-card">
-            <span class="card-kicker">AI</span>
-            <h3>Experiments and builds</h3>
-            <p>Projects, prototypes, workflows, and notes from learning how AI can help people create and solve problems.</p>
-            <a href="/projects/">View AI work</a>
+            <div class="card-kicker">Technology</div>
+            <h3>AI and systems learning</h3>
+            <p>Project notes and learning paths that treat new tools with curiosity, restraint, and real accountability.</p>
+            <a href="/projects/">View projects</a>
           </article>
 
           <article class="path-card">
-            <span class="card-kicker">Cyber</span>
-            <h3>Security with humility</h3>
-            <p>Cybersecurity learning, practical projects, defensive thinking, and a steady respect for the people behind systems.</p>
-            <a href="/projects/">View cyber projects</a>
+            <div class="card-kicker">Security</div>
+            <h3>Protect your neighbors</h3>
+            <p>Cybersecurity reflections that connect practical defenses with the dignity of real people.</p>
+            <a href="/blog/">Read security writing</a>
           </article>
         </div>
       </section>
 
-
-      <section class="section work" id="projects-preview">
-        <div class="section-heading section-heading-row">
-          <div>
-            <p class="eyebrow">Latest projects</p>
-            <h2>Recent project space.</h2>
-            <p>Two highlighted items live here so the homepage stays focused. The full project and credential list has its own page.</p>
-          </div>
-          <a class="button secondary" href="/projects/">View all projects</a>
-        </div>
-
-        <div class="work-list">
-          <article>
-            <span>01</span>
-            <div>
-              <h3>Assembly by Hand</h3>
-              <p>A 30 day x86-64 assembly learning program that starts with raw syscalls and builds toward a tested hash map capstone.</p>
-              <a href="/assembly-by-hand.html">Start the first lesson</a>
-            </div>
-          </article>
-          <article>
-            <span>02</span>
-            <div>
-              <h3>Cybersecurity project placeholder</h3>
-              <p>Add labs, writeups, tools, defensive projects, or learning milestones.</p>
-            </div>
-          </article>
-        </div>
+      <section id="work">
+        <div class="kicker">03 &mdash; Current work</div>
+        <h2>What is active right now.</h2>
+        <p>
+          The project page now focuses on work that has actual shape: a low-level programming learning path, security
+          study, writing from current articles, and faith-shaped AI planning.
+        </p>
+        <ol class="steps">
+          <li><strong>Assembly by Hand:</strong> a 30 day x86-64 learning path from raw syscalls to a hash map capstone.</li>
+          <li><strong>Security study:</strong> SOC, API security, and defensive foundations documented through certifications and practice.</li>
+          <li><strong>Article reactions:</strong> cybersecurity and AI news read through stewardship, humility, and care for people.</li>
+          <li><strong>Faith and AI planning:</strong> early thinking about tools that help readers approach Scripture with better context.</li>
+        </ol>
+        <p><a class="button secondary" href="/projects/">Open the project page</a></p>
       </section>
 
-      <section class="section jesus-daily" id="daily-jesus-preview">
-        <div class="section-heading section-heading-row">
-          <div>
-            <p class="eyebrow">Latest Daily Jesus</p>
-            <h2>Scripture snippets for today.</h2>
-            <p>The homepage shows the latest two reflections. The full Daily Jesus archive now has its own page.</p>
-          </div>
-          <a class="button secondary" href="/dailyjesus/">View all Daily Jesus</a>
-        </div>
-
+      <section id="daily">
+        <div class="kicker">04 &mdash; Latest Daily Jesus</div>
+        <h2>Scripture for a Jesus-centered day.</h2>
         <div class="archive-grid" aria-label="Latest Daily Jesus preview">
           <article>
-            <p class="date">July 4, 2026 · Matthew 11:28</p>
+            <p class="date">July 4, 2026 &middot; Matthew 11:28</p>
             <h3>Rest From Jesus</h3>
             <p>Jesus does not invite the weary to pretend they are strong; He calls them to come to Him and receive the rest only His mercy and lordship can give.</p>
             <a href="/dailyjesus/">Read the full reflection</a>
           </article>
           <article>
-            <p class="date">July 3, 2026 · 1 John 3:18</p>
+            <p class="date">July 3, 2026 &middot; 1 John 3:18</p>
             <h3>Love in Action and Truth</h3>
             <p>John calls God&rsquo;s children to a love that becomes visible in truthful action, and Jesus shows this love fully in compassion, sacrifice, and embodied faithfulness.</p>
             <a href="/dailyjesus/">Read the full reflection</a>
           </article>
         </div>
-
       </section>
 
-      <section class="section blog" id="blog-preview">
-        <div class="section-heading section-heading-row">
-          <div>
-            <p class="eyebrow">Latest blog</p>
-            <h2>Faith and cybersecurity.</h2>
-            <p>The homepage shows the latest two articles. The full article archive now has its own page.</p>
-          </div>
-          <a class="button secondary" href="/blog/">View all articles</a>
-        </div>
-
+      <section id="writing">
+        <div class="kicker">05 &mdash; Recent writing</div>
+        <h2>Faith and cybersecurity in conversation.</h2>
         <div class="article-list">
           <article class="blog-post">
-            <p class="date">June 22, 2026 · AI and Cybersecurity</p>
+            <p class="date">June 22, 2026 &middot; AI and Cybersecurity</p>
             <h3>AI Agents Need Guardrails, Not Just Faster Deploys</h3>
             <p class="article-source">
               Source: <a href="https://blog.cloudflare.com/temporary-accounts/" target="_blank" rel="noopener">Cloudflare on temporary accounts for AI agents</a>
             </p>
-            <p>Cloudflare’s temporary accounts for AI agents show why faster deployment needs clear limits, ownership, expiration, and human accountability.</p>
+            <p>Cloudflare&rsquo;s temporary accounts for AI agents show why faster deployment needs clear limits, ownership, expiration, and human accountability.</p>
             <a href="/blog/">Read the full article</a>
           </article>
 
           <article class="blog-post">
-            <p class="date">June 21, 2026 · macOS Security</p>
+            <p class="date">June 21, 2026 &middot; macOS Security</p>
             <h3>When Your Mac Asks You to Slow Down</h3>
             <p class="article-source">
               Source: <a href="https://moonlock.com/apple-explains-macos26-blocks-terminal-commands" target="_blank" rel="noopener">Moonlock on macOS 26 Terminal paste warnings</a>
             </p>
-            <p>Apple’s new Terminal warning is a reminder that sometimes the most secure thing we can do is pause before trusting a command.</p>
+            <p>Apple&rsquo;s Terminal warning is a reminder that sometimes the most secure thing we can do is pause before trusting a command.</p>
             <a href="/blog/">Read the full article</a>
           </article>
         </div>
       </section>
 
-      <section class="section contact" id="contact-preview">
-        <div>
-          <p class="eyebrow">Contact</p>
-          <h2>Want to connect?</h2>
-          <p>
-            Reach out about faith, encouragement, AI projects, cybersecurity, or something else. The contact form now has its own page.
-          </p>
-        </div>
-        <div class="contact-card">
-          <h3>Start a conversation</h3>
-          <p>Choose the Contact page when you are ready to send a note.</p>
-          <a class="button primary" href="/contact/">Go to contact</a>
-        </div>
+      <section id="contact">
+        <div class="kicker">06 &mdash; Connect</div>
+        <h2>Start a conversation.</h2>
+        <p>
+          Reach out about faith, encouragement, AI projects, cybersecurity, or the kind of practical question that gets better
+          when someone thoughtful sits with it for a while.
+        </p>
+        <p><a class="button primary" href="/contact/">Go to contact</a></p>
       </section>
     </main>
+
     <footer class="site-footer">
+      <p class="verse">Made to reflect the image of God.</p>
       <p>&copy; <span id="year"></span> Reigndownupon. All are welcome.</p>
       <a href="#top">Back to top</a>
     </footer>
