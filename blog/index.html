@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="All faith-shaped cybersecurity, privacy, AI, and technology articles from Reigndownupon."
+      content="The Reigndownupon blog is being rebuilt for new writing about faith, cybersecurity, AI, privacy, and people."
     >
     <title>Blog | Reigndownupon</title>
     <link rel="stylesheet" href="/styles.css">
@@ -28,180 +28,43 @@
 
     <section class="hero" id="top">
       <div class="mark">Blog</div>
-      <h1>Faith and <span class="warm">Cybersecurity</span> Writing</h1>
-      <p class="tag">Cybersecurity, privacy, AI, and technology reflections shaped by truth, human dignity, and neighbor-love.</p>
+      <h1>Faith, Technology, and <span class="warm">Real People</span></h1>
+      <p class="tag">A home for new writing about cybersecurity, privacy, AI, faith, and the people affected by the systems we build.</p>
     </section>
 
     <nav class="toc" aria-label="Blog contents">
       <h2>Contents</h2>
       <ol>
-        <li><a href="#blog"><span class="n">01</span> Article Archive</a></li>
-        <li><a href="#blog"><span class="n">02</span> AI and Cybersecurity</a></li>
-        <li><a href="#blog"><span class="n">03</span> Privacy and Power</a></li>
-        <li><a href="#blog"><span class="n">04</span> Practical Protection</a></li>
+        <li><a href="#blog"><span class="n">01</span> The Reset</a></li>
+        <li><a href="#next"><span class="n">02</span> What Comes Next</a></li>
       </ol>
     </nav>
 
     <main class="wrap">
       <section id="blog">
-        <div class="section-heading">
-          <div class="kicker">Archive</div>
-          <h2>Faith and Cybersecurity.</h2>
-          <p>
-            Thoughts on current cybersecurity articles from a faith-shaped perspective: warm, direct, self-aware,
-            pastoral, and practical.
-          </p>
-        </div>
-
-        <div class="article-list">
-          <article class="blog-post">
-            <p class="date">June 22, 2026 · AI and Cybersecurity</p>
-            <h3>AI Agents Need Guardrails, Not Just Faster Deploys</h3>
-            <p class="article-source">
-              Source: <a href="https://blog.cloudflare.com/temporary-accounts/" target="_blank" rel="noopener">Cloudflare on temporary accounts for AI agents</a>
-            </p>
-            <p>Cloudflare announced Temporary Accounts for AI agents, a new way for an agent to run wrangler deploy --temporary and deploy a Worker without first going through a normal sign up flow. The deployment stays live for 60 minutes. A person can claim it and make it permanent, or it expires automatically.</p>
-            <p>I understand why this matters. AI coding agents are getting better at building, testing, and iterating. But deployment is where the digital world stops being theoretical. Once something is live, even briefly, it can affect users, data, reputation, cost, and trust.</p>
-            <p>That makes this more than a developer convenience story. It is an accountability story.</p>
-            <p>Temporary access can be wise when it is bounded. A 60 minute lifespan is a meaningful limit. A claim step brings a human back into ownership. Automatic deletion helps reduce abandoned resources. Those are good patterns because they recognize that speed without stewardship becomes risk.</p>
-            <p>But teams should still ask careful questions before letting agents deploy anything, even temporarily. What can the agent access? Can it expose secrets? Can it connect to production data? Who reviews the output? Are logs retained? Is there a naming and cleanup process? Is this being used only for experiments, or could it quietly become a shadow production path?</p>
-            <p>The goal should not be to make AI agents frictionless at any cost. The goal should be to make responsible work smoother while keeping human accountability clear. In security, identity matters. Ownership matters. Expiration matters. Review matters.</p>
-            <p>Fast tools are not bad. Powerful tools are not bad. But power should be shaped by wisdom, service, and protection. We should be honest about what AI agents can do, humble about what they may get wrong, and careful with the systems we allow them to touch.</p>
-            <p>If your team is experimenting with AI agents, treat temporary deployments as a sandbox, not a loophole. Keep the limits visible. Keep humans responsible. Keep production protected.</p>
-          </article>
-
-          <article class="blog-post">
-            <p class="date">June 21, 2026 · macOS Security</p>
-            <h3>When Your Mac Asks You to Slow Down</h3>
-            <p class="article-source">
-              Source: <a href="https://moonlock.com/apple-explains-macos26-blocks-terminal-commands" target="_blank" rel="noopener">Moonlock on macOS 26 Terminal paste warnings</a>
-            </p>
-            <p>Apple’s new macOS 26 Terminal warning is a small feature with a big lesson behind it. According to Moonlock’s reporting, Apple has confirmed a warning that appears when a user tries to paste a script into Terminal. The feature is enabled by default and is aimed at ClickFix attacks, where criminals trick people into copying and running commands that look like a quick fix but actually install malware or steal data.</p>
-            <p>That matters because the most dangerous part of many attacks is not the command itself. It is the moment of misplaced trust right before the command runs.</p>
-            <p>We live in a time when instructions move fast. A pop up says your browser is broken. A fake support page says your computer needs repair. A message says to copy this command and paste it into Terminal. The pressure is designed to bypass wisdom. It wants urgency to replace discernment.</p>
-            <p>I like this feature because it treats friction as protection. Not all friction is bad. Sometimes a warning is a mercy. Sometimes a pause is what keeps a person from handing over their machine, their accounts, their photos, or their work to someone who never should have had access.</p>
-            <p>There is a deeper lesson here for all of us, whether we use macOS or not: do not run commands you do not understand just because a page sounds confident. Search for the issue from trusted sources. Ask someone technical. Read the command before running it. If a website pressures you to act immediately, that is a signal to slow down, not speed up.</p>
-            <p>Security is not only about stronger tools. It is also about forming better habits. Wisdom asks, “Who is asking me to do this? What power am I giving away? What could this command change?” That kind of pause protects people, and protecting people is one of the clearest ways technology can serve our neighbor.</p>
-          </article>
-
-          <article class="blog-post">
-            <p class="date">June 20, 2026 · Website Security</p>
-            <h3>Your Website Can Protect People Before They Ever Meet You</h3>
-            <p class="article-source">
-              Source: <a href="https://www.malwarebytes.com/blog/news/2026/06/nearly-15000-infected-websites-cleaned-in-socgholish-crackdown" target="_blank" rel="noopener">Malwarebytes on the SocGholish website cleanup</a>
-            </p>
-            <p>Malwarebytes reported that nearly 15,000 infected WordPress sites were cleaned as part of a law enforcement action against SocGholish, also known as FakeUpdates. This malware operation has long abused legitimate websites to show fake browser or software update prompts. A visitor thinks they are doing the responsible thing by updating. In reality, they may be opening the door to malware, ransomware, or account compromise.</p>
-            <p>That detail matters because many of the abused websites were not shady corners of the internet. Malwarebytes notes that infected sites included everyday businesses like restaurants and car garages. In other words, people could be exposed while browsing sites they already trusted.</p>
-            <p>This is one reason website security is not just a technical maintenance chore. It is loving your neighbor in digital form.</p>
-            <p>If you own or manage a website, especially a WordPress site, your security posture affects more than your brand. It affects visitors, customers, donors, readers, volunteers, and families who may trust your site enough to click what appears there. Keeping software updated, using strong passwords, enabling multi-factor authentication, removing unused plugins, and monitoring for compromise are not glamorous tasks. But they are protective tasks.</p>
-            <p>The SocGholish crackdown is encouraging because it shows defenders, researchers, and law enforcement pushing back against infrastructure that harmed real people. But it should also prompt ordinary site owners to ask a sober question: if my site were compromised, would I know?</p>
-            <p>A practical checklist is a good place to start:</p>
-            <ul>
-              <li>Update your CMS, themes, and plugins.</li>
-              <li>Enable MFA for all admin accounts.</li>
-              <li>Remove unused accounts and plugins.</li>
-              <li>Use unique passwords stored in a password manager.</li>
-              <li>Back up the site regularly.</li>
-              <li>Watch for unexpected redirects, popups, or injected scripts.</li>
-              <li>Choose hosting that provides security logs and malware scanning.</li>
-            </ul>
-            <p>The internet is full of invisible dependencies. A small neglected website can become part of a much larger harm chain. But the opposite is also true: a well-maintained website can quietly protect people.</p>
-            <p>Faithfulness sometimes looks like patching, rotating passwords, and refusing to let trust be exploited.</p>
-          </article>
-
-          <article class="blog-post">
-            <p class="date">June 19, 2026 · AI and Cybersecurity</p>
-            <h3>When an AI Agent Browses the Web, Localhost Is Not a Sanctuary</h3>
-            <p class="article-source">
-              Source: <a href="https://www.microsoft.com/en-us/security/blog/2026/06/18/autojack-single-page-rce-host-running-ai-agent/" target="_blank" rel="noopener">Microsoft Security on AutoJack and AI agent host risk</a>
-            </p>
-            <p>Microsoft’s AutoJack research is a helpful warning for anyone building with AI agents: once an agent can browse untrusted web pages and talk to local tools, old assumptions about “safe” boundaries start to break down.</p>
-            <p>The issue Microsoft described involved AutoGen Studio’s MCP WebSocket surface. In simple terms, a malicious web page rendered by an AI browsing agent could reach a local service and trigger process execution on the host. Microsoft notes this specific chain was hardened upstream and was not present in the PyPI release, which matters. This is not a reason to panic. But it is a reason to pay attention.</p>
-            <p>The larger lesson is bigger than one framework. AI agents are useful because they can do things: read files, call tools, browse pages, connect to APIs, and automate workflows. But every new capability is also a new responsibility. If an agent can touch the open internet and privileged local services in the same flow, then “localhost” is no longer a magic wall. It becomes part of the attack surface.</p>
-            <p>This is where technical design and moral stewardship meet. Security is not just about protecting systems. It is about protecting the people who trust those systems with their work, data, homes, ministries, and businesses. A tool that is powerful but poorly bounded can become a doorway for harm.</p>
-            <p>Practical takeaways are straightforward: authenticate local control planes, isolate agent tools, limit what agents can execute, avoid exposing sensitive services without authorization, and treat prototypes as prototypes. Developer convenience is valuable, but it should not outrank truthfulness about risk.</p>
-            <p>From a faith-shaped perspective, this is a neighbor-love issue. We should build AI systems with humility, not hype. We should assume limits are necessary, not annoying. And we should remember that trustworthy technology is not technology that can do everything. It is technology governed by wisdom, restraint, and care for the people on the other side of the screen.</p>
-          </article>
-
-          <article class="blog-post">
-            <p class="date">June 18, 2026 · Privacy and Cybersecurity</p>
-            <h3>Privacy Is Not Paranoia When Power Is Abused</h3>
-            <p class="article-source">
-              Source: <a href="https://citizenlab.ca/how-freedom-tech-is-pushing-back-against-digital-authoritarianism/" target="_blank" rel="noopener">Citizen Lab on freedom tech and digital authoritarianism</a>
-            </p>
-            <p>Citizen Lab’s short piece on “Freedom Tech” points to a reality that should concern more than security professionals. Spyware and surveillance tools do not stay abstract for long. They touch phones, messages, relationships, movements, families, and sometimes people’s physical safety.</p>
-            <p>The article highlights comments from Citizen Lab researchers about lagging legal safeguards and the incentives that allow spyware to spread. One line stood out: companies’ incentives often do not align with personal privacy. That is a sober way of saying something many people feel but cannot always name. The tools are powerful, the oversight is weak, and ordinary people are often left to carry the risk.</p>
-            <p>This is why privacy should not be dismissed as paranoia. In a world where devices can become tracking tools and private communications can become leverage, privacy is part of human dignity. It gives people room to think, speak, repent, heal, organize, worship, report abuse, and ask for help without unnecessary exposure.</p>
-            <p>The good news is that there are practical steps. Citizen Lab points readers toward tools and resources like Apple’s Lockdown Mode, Security Planner, and Access Now’s helpline. Not everyone needs the same level of protection, but everyone deserves honest guidance instead of fear.</p>
-            <p>For churches, nonprofits, families, and small teams, this is a discipleship and stewardship issue too. Who in our community is more exposed than they realize? Mission workers, abuse survivors, journalists, activists, pastors handling sensitive care, and young people navigating online pressure may all need better protection.</p>
-            <p>The way of Jesus teaches us to pay attention to the vulnerable, not just the powerful. In technology, that means asking who can be watched, pressured, silenced, or exploited, and then using our skill to protect them.</p>
-            <p>Privacy is not about hiding wrongdoing. Often, it is about guarding what is precious from those who would misuse power.</p>
-          </article>
-
-          <article class="blog-post">
-            <p class="date">June 17, 2026 · Privacy and Cybersecurity</p>
-            <h3>When Surveillance Tools Outrun Accountability</h3>
-            <p class="article-source">
-              Source: <a href="https://www.schneier.com/blog/archives/2026/06/flock-cameras-are-being-used-for-stalking.html" target="_blank" rel="noopener">Schneier on Security on Flock cameras and stalking</a>
-            </p>
-            <p>A tool built for safety can still become a tool of harm when accountability is weak.</p>
-            <p>Schneier’s post points to reports of police officers using Flock camera systems to stalk people. That should sober all of us, not because every use of camera based public safety technology is automatically wrong, but because powerful systems always carry the possibility of insider abuse. The issue is not only whether a tool can help solve crimes. The issue is also whether the people being watched have meaningful protection from misuse.</p>
-            <p>This is where cybersecurity, privacy, and moral responsibility overlap. Access control is not just a technical checkbox. Audit logs are not just compliance paperwork. Review processes, warrant standards, role based access, alerts for unusual searches, and real consequences for abuse are ways of saying: people are not data points to be casually queried.</p>
-            <p>From a Jesus shaped view of power, authority is meant to serve and protect, not dominate or indulge private desire. That does not answer every policy question by itself, but it does give us a moral direction. The stronger the surveillance capability, the stronger the accountability must be. The more sensitive the data, the more carefully access should be limited. The more invisible the monitoring is to ordinary people, the more transparent governance needs to become.</p>
-            <p>Public safety technologies should be judged not only by what they make possible for investigators, but by what they make possible for victims, insiders, and the vulnerable. If a system can quietly expose someone’s movements, then it needs more than trust in good intentions. It needs restraints, oversight, and a culture that treats misuse as a serious violation of human dignity.</p>
-            <p>Security should protect neighbors. When it becomes a shortcut around consent, privacy, or accountability, it stops looking like protection and starts looking like power without wisdom.</p>
-          </article>
-
-          <article class="blog-post">
-            <p class="date">June 16, 2026 · Privacy and Cybersecurity</p>
-            <h3>Fighting Scams Without Building a Surveillance Habit</h3>
-            <p class="article-source">
-              Source: <a href="https://www.schneier.com/blog/archives/2026/06/the-fcc-wants-to-eliminate-burner-phones.html" target="_blank" rel="noopener">Schneier on Security on the FCC and burner phones</a>
-            </p>
-            <p>Scams are real. Robocalls, fraud campaigns, impersonation, and phone-based abuse hurt people every day. So when regulators look for ways to make telecom providers know who is using their networks, the motivation is understandable.</p>
-            <p>But Bruce Schneier’s summary of a proposed FCC rule raises the harder question: how much identity collection should become normal in the name of stopping abuse?</p>
-            <p>The proposal, as described, would push telecom companies to collect and retain more personal information from phone customers, including government identification numbers and physical addresses. The goal is to make it harder for scammers to hide behind anonymous or loosely registered phone service. That sounds reasonable at first glance. Accountability matters.</p>
-            <p>But privacy also matters. Anonymous or low-friction phone access is not only useful to criminals. It can matter for people leaving abuse, journalists protecting sources, whistleblowers, activists, vulnerable communities, and ordinary people who simply do not want every communication tool tied to a permanent identity trail.</p>
-            <p>A wise society should resist false choices. We do not have to choose between “let scammers run wild” and “collect everyone’s identity by default.” The better path is narrower, more accountable, and more carefully measured.</p>
-            <p>That means asking: Will this actually reduce scams, or will criminals route around it while normal people lose privacy? How will telecoms secure the new identity data they collect? Who can access it? How long is it retained? What happens when it is breached? What exceptions exist for people at risk? What oversight prevents mission creep?</p>
-            <p>The deeper issue is more than convenience. People are not merely risk profiles in a database. They are image-bearers with dignity, safety concerns, and real-world vulnerabilities. Protecting the public from fraud is good. Building unnecessary surveillance habits is not.</p>
-            <p>The best security policies protect people twice: first from criminals, and then from overreach. If we want trust, we need tools that are effective, limited, transparent, and accountable.</p>
-          </article>
-
-          <article class="blog-post">
-            <p class="date">June 15, 2026 · AI and Cybersecurity</p>
-            <h3>Hosted AI Is a Dependency, Not a Foundation</h3>
-            <p class="article-source">
-              Source: <a href="https://snyk.io/blog/fable-mythos-suspension-security-takeaways/" target="_blank" rel="noopener">Snyk on AI model suspension and security teams</a>
-            </p>
-            <p>Snyk’s writeup on the reported Fable 5 and Mythos 5 suspension is worth reading less as model drama and more as a warning about dependency.</p>
-            <p>According to Snyk, Anthropic disabled access to Claude Fable 5 and Claude Mythos 5 worldwide after receiving a U.S. export control directive. The reported concern involved a possible jailbreak connected to code analysis and vulnerability fixing. Anthropic reportedly argued that the capability in question is also a normal defensive security workflow: asking a model to read code and help fix flaws.</p>
-            <p>That tension is not going away. The same AI capability that helps defenders find and remediate weaknesses can also help attackers understand them. Security teams cannot pretend powerful tools are harmless. But they also cannot build modern defensive workflows as if any one hosted model will always be available, always allowed, always stable, and always governed in a way that matches their operational needs.</p>
-            <p>The practical takeaway is simple: treat AI like part of your supply chain.</p>
-            <p>Know where your organization uses AI. Know which workflows depend on a single provider. Know what happens if that provider changes terms, loses availability, disables a model, or becomes subject to a government order. Have fallback paths. Keep human review in the loop. Scan AI generated code. Log meaningful decisions. Do not let convenience quietly become fragility.</p>
-            <p>There is a wisdom issue here too. Technology often tempts us to confuse speed with strength. But a system that moves fast while depending on one opaque, revocable service may not be strong. It may just be moving quickly on borrowed stability.</p>
-            <p>AI can be a useful assistant. It can help us write, review, test, summarize, and secure. But it should not become a substitute for judgment, accountability, or resilient design.</p>
-            <p>If we are going to use powerful tools, we should use them truthfully: with gratitude for what they can do, honesty about what they cannot guarantee, and enough humility to build systems that can keep serving people when the tool disappears.</p>
-          </article>
-
-          <article class="blog-post">
-            <p class="date">June 14, 2026 · AI and Cybersecurity</p>
-            <h3>AI Scams Are a Trust Problem Before They Are a Tech Problem</h3>
-            <p class="article-source">
-              Source: <a href="https://blog.google/innovation-and-ai/technology/safety-security/combatting-ai-scams/" target="_blank" rel="noopener">Google Safety &amp; Security on combating AI scams</a>
-            </p>
-            <p>Google published an update on its efforts to fight AI powered scams, including a lawsuit aimed at a cybercrime network it calls the “Outsider Enterprise.” According to Google, the group uses phishing kits, fake websites, brand impersonation, and mass text message campaigns to steal passwords, payment information, and money.</p>
-            <p>The numbers are sobering. Google says the operation is connected to 9,000 fake websites, more than 1 million fraudulent URLs, and millions of scam messages. In a two week period in May 2026, Android users flagged 55,000 spam texts, while Google says 2.5 million related messages were sent to Android users.</p>
-            <p>This is where the AI conversation has to grow up. AI is not only a productivity tool or a shiny assistant. In the hands of criminals, it can make deception cheaper, faster, and more convincing. Fake package alerts, urgent bank warnings, and “your account is compromised” messages are not just annoying. They are attacks on trust.</p>
-            <p>Scams work by rushing people. They create fear, pressure, and confusion so someone acts before they have time to think. That matters because the people most at risk are often the tired, distracted, elderly, overwhelmed, or trusting, the very people security should be designed to protect.</p>
-            <p>Google’s response combines legal action, FBI coordination, telecom partnerships, product level protections, and legislative advocacy. That layered approach matters because no single person can solve this alone. Users need better tools. Companies need accountability. Law enforcement needs coordination. Families, churches, schools, and communities need plain language education.</p>
-            <p>A few practical reminders still matter: do not click urgent links from unexpected texts, do not enter passwords through message links, verify directly through the official app or website, and slow down when a message tries to create panic. Urgency is often the attacker’s favorite weapon.</p>
-            <p>AI may change the scale of scams, but the heart of the issue is old: deception for gain. The response should be truthful, protective, patient, and wise.</p>
-          </article>
-        </div>
+        <div class="kicker">01 &mdash; The reset</div>
+        <h2>The archive is clear.</h2>
+        <p>
+          The old posts have been removed. New writing will be added here when it is ready: clear, useful,
+          and in my own voice.
+        </p>
       </section>
 
+      <section id="next">
+        <div class="kicker">02 &mdash; What comes next</div>
+        <h2>A place for writing worth sharing.</h2>
+        <div class="holding-card">
+          <div class="card-kicker">Next post</div>
+          <h3>This space is ready.</h3>
+          <p>
+            Future posts will explore faith, cybersecurity, AI, privacy, stewardship, and the ordinary people
+            who live with the choices technology makes possible.
+          </p>
+          <a href="/projects/">See what I am working on now</a>
+        </div>
+      </section>
     </main>
+
     <footer class="site-footer">
       <p class="verse">Made to reflect the image of God.</p>
       <p>&copy; <span id="year"></span> Reigndownupon. All are welcome.</p>
