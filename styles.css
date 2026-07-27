@@ -777,6 +777,11 @@ pre {
     flex-direction: column;
   }
 
+  section,
+  .section {
+    scroll-margin-top: 128px;
+  }
+
   .nav-links {
     width: 100%;
     overflow-x: auto;
