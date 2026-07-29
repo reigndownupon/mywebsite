@@ -630,6 +630,24 @@ h4 {
   font-weight: 700;
 }
 
+.daily-feature .scripture-passage {
+  font-style: normal;
+}
+
+.daily-feature .scripture-passage p {
+  color: inherit;
+}
+
+.daily-feature .scripture-passage p:last-of-type {
+  margin-bottom: 0;
+}
+
+.daily-feature .scripture-passage sup {
+  color: var(--accent);
+  font-size: 0.7em;
+  font-weight: 700;
+}
+
 .daily-feature ol {
   display: grid;
   gap: 10px;
