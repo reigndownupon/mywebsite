@@ -8,7 +8,7 @@
       content="Daily Jesus offers a daily Scripture reading, a short reflection, and an honest response focused on growing closer to Jesus."
     >
     <title>Daily Jesus | Reigndownupon</title>
-    <link rel="stylesheet" href="/styles.css?v=2026080201">
+    <link rel="stylesheet" href="/styles.css?v=2026080202">
     <link rel="icon" href="/favicon.svg?v=1" type="image/svg+xml">
   </head>
   <body>
@@ -52,13 +52,20 @@
         <li><a href="#do-you-love-me">Do You Love Me?</a></li>
         <li><a href="#rich-toward-god">Rich Toward God</a></li>
       </ol>
-      <details class="toc-list">
-        <summary>List all</summary>
-        <ol>
+      <div class="toc-list">
+        <ol class="toc-archive" id="daily-jesus-archive" hidden>
           <li><a href="#learning-to-follow">Learning to Follow</a></li>
           <li><a href="#peacemakers">Peacemakers</a></li>
         </ol>
-      </details>
+        <button
+          class="toc-list-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="daily-jesus-archive"
+        >
+          List all
+        </button>
+      </div>
     </nav>
 
     <main class="wrap">
@@ -622,6 +629,6 @@
       <a href="#top">Back to top</a>
     </footer>
 
-    <script src="/script.js"></script>
+    <script src="/script.js?v=2026080201"></script>
   </body>
 </html>

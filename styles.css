@@ -264,58 +264,45 @@ p {
   border-top: 1px solid var(--line);
 }
 
-.toc-list summary {
+.toc-list-toggle {
   display: inline-flex;
   min-height: 44px;
   align-items: center;
   padding: 8px 16px;
   border: 1px solid var(--accent);
   border-radius: 999px;
+  background: var(--paper);
   color: var(--accent);
+  font-family: inherit;
   font-size: 15px;
   font-weight: 700;
-  list-style: none;
   cursor: pointer;
 }
 
-.toc-list summary::-webkit-details-marker {
-  display: none;
-}
-
-.toc-list summary::after {
+.toc-list-toggle::after {
   content: "+";
   margin-left: 8px;
   font-size: 18px;
   line-height: 1;
 }
 
-.toc-list[open] summary::after {
+.toc-list-toggle[aria-expanded="true"]::after {
   content: "−";
 }
 
-.toc-list[open] {
-  display: flex;
-  flex-direction: column;
+.toc-list.is-open {
   padding-top: 0;
   border-top: 0;
 }
 
-.toc-list[open] summary {
-  align-self: flex-start;
-}
-
-.toc-list ol {
-  margin-top: 14px;
-  padding-top: 14px;
-  border-top: 1px dashed var(--line);
-}
-
-.toc-list[open] ol {
-  order: -1;
+.toc-list .toc-archive {
   margin: 0 0 12px;
   padding: 0 0 12px;
-  border-top: 0;
   border-bottom: 1px solid var(--line);
+}
+
+.toc-list .toc-archive[hidden] {
+  display: none;
 }
 
 .toc ol {
