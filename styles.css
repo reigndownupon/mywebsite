@@ -674,7 +674,8 @@ h4 {
   padding-left: 24px;
 }
 
-.daily-feature blockquote {
+.daily-feature blockquote,
+.blog-post blockquote {
   margin: 0 0 18px;
   padding: 18px 24px;
   border-left: 4px solid var(--accent-soft);
@@ -685,7 +686,8 @@ h4 {
   font-style: italic;
 }
 
-.daily-feature blockquote cite {
+.daily-feature blockquote cite,
+.blog-post blockquote cite {
   display: block;
   margin-top: 10px;
   color: var(--muted);
