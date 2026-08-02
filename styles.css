@@ -293,10 +293,29 @@ p {
   content: "−";
 }
 
+.toc-list[open] {
+  display: flex;
+  flex-direction: column;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.toc-list[open] summary {
+  align-self: flex-start;
+}
+
 .toc-list ol {
   margin-top: 14px;
   padding-top: 14px;
   border-top: 1px dashed var(--line);
+}
+
+.toc-list[open] ol {
+  order: -1;
+  margin: 0 0 12px;
+  padding: 0 0 12px;
+  border-top: 0;
+  border-bottom: 1px solid var(--line);
 }
 
 .toc ol {
